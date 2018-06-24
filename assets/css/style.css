@@ -1,0 +1,252 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.hero {
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.about-us-letters {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 196px;
+  height: 300px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.16);
+  -webkit-transform: translateY(140px);
+  -ms-transform: translateY(140px);
+  transform: translateY(140px);
+}
+
+.nav-bar {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 32px 0px;
+}
+
+.nav-list {
+  list-style: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.button {
+  font-family: 'Helvetica', serif;
+  font-size: 14px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 10px;
+  margin: auto 2px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #00b0ff;
+  color: white;
+  cursor: pointer;
+}
+
+.title {
+  margin: 100px auto;
+}
+
+.title h1, .title h2 {
+  text-align: center;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0px auto;
+}
+
+.title h1 {
+  font-size: 50px;
+}
+
+.title h2 {
+  font-size: 24px;
+  color: white;
+}
+
+.social span {
+  color: #fff;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.icon-black-circe {
+  background-color: #000;
+  border-radius: 128px;
+  display: inline;
+  padding: 12px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 0px 6px;
+}
+
+.store {
+  background-image: url("../images/card.jpg");
+  background-repeat: no-repeat;
+  background-color: #fff;
+  max-width: 1028px;
+  min-height: 600px;
+  margin: 0px auto;
+  -webkit-box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
+}
+
+.about-us {
+  background-image: url(../images/about.jpg);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin-bottom: 430px;
+  position: relative;
+  z-index: 1;
+}
+
+.left {
+  background-color: #fff;
+  margin: 300px 0px 0px 0px;
+  width: 50%;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+}
+
+.left-box {
+  max-width: 360px;
+  float: right;
+  margin: 100px 120px 10px 10px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.x-icon {
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+
+.left-box p {
+  font-family: 'Playfair Display', serif;
+  size: 22px;
+  font-style: italic;
+  font-size: 22px;
+  line-height: calc(36/22);
+}
+
+.left-box a {
+  font-family: 'Montserrat', sans-serif;
+  color: #00b0ff;
+  font-size: 16px;
+}
+
+.right iframe {
+  margin: 560px 0px 0px 70px;
+}
+
+.updates {
+  max-width: 900px;
+}
+
+.updates .header {
+  padding: 10px 0px;
+  max-width: 900px;
+}
+
+.center {
+  text-align: center;
+}
+
+.link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding: 18px 30px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #00b0ff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.gallery {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.gallery-item {
+  height: 345px;
+  background-color: white;
+  width: 270px;
+}
+
+.gallery-item img {
+  max-width: 100%;
+}
+
+.gallery-item:hover {
+  -webkit-box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.gallery-item h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #787878;
+  padding: 26px;
+  font-weight: 400;
+}
+
+.gallery-item h2:hover {
+  color: #0022ff;
+}
+
+/* .notes{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+     ps spacinimo reiksme lygi x/1000 ten kur VA parasyta ir tarpai tarp eiliu cia kur "characters"
+} */

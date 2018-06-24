@@ -1,0 +1,236 @@
+@import "_reset";
+
+$mainColor: #00b0ff;
+
+@mixin mainHover{
+    background-color: $mainColor;
+    color: white;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    align-self:center;
+}
+
+.container {
+    max-width:1170px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.hero{
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.about-us-letters{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 196px;
+    height:300px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.16);
+    transform: translateY(140px);
+}   
+
+.nav-bar {
+    justify-content: space-between;
+    padding: 32px 0px;
+}
+
+.nav-list {
+    list-style: none;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.button {
+    font-family: 'Helvetica', serif;
+    font-size: 14px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 10px;
+    margin: auto 2px;
+    text-decoration: none;
+    &:hover{
+        @include mainHover();
+    }
+}
+
+.title {
+    margin: 100px auto;
+    %headers{
+        text-align: center;
+        color: #000000;
+        font-family: 'Playfair Display', serif;
+        font-size: 50px;
+        font-weight: 400;
+        margin: 0px auto;
+    }
+    h1{
+        @extend %headers;
+        font-size: 50px;
+    }
+    h2{
+        @extend %headers;
+        font-size: 24px;
+        color:white;
+    }
+}
+
+.social span {
+    color: #fff;
+    justify-content: space-between;
+}
+
+.icon-black-circe {
+    background-color: #000;
+    border-radius: 128px;
+    display: inline;
+    padding: 12px;
+    align-self: center;
+    margin: 0px 6px;
+}
+
+.store {
+    background-image: url("../images/card.jpg");
+    background-repeat: no-repeat;
+    background-color: #fff;
+    max-width: 1028px;
+    min-height: 600px;
+    margin: 0px auto;
+    box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
+}
+
+.about-us {
+    background-image: url(../images/about.jpg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin-bottom: 430px;
+    position: relative;
+    z-index: 1;
+}
+
+.left {
+    background-color: #fff;
+    margin: 300px 0px 0px 0px;
+    width: 50%;
+    justify-content: right;
+}
+
+.left-box {
+    max-width: 360px;
+    float: right;
+    margin: 100px 120px 10px 10px;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    }
+
+.x-icon{
+    text-align: center;
+    display : block;
+    margin: 10px;
+}
+
+.left-box {
+    p{
+        font-family: 'Playfair Display', serif;
+        size: 22px;
+        font-style: italic;
+        font-size:22px;
+        line-height: calc(36/22);
+    }
+    a{
+        font-family: 'Montserrat', sans-serif;
+        color: $mainColor;
+        font-size: 16px;
+    }
+}
+
+
+.right iframe{
+    margin: 560px 0px 0px 70px;
+
+}
+
+.updates{
+    max-width: 900px;
+    div{
+        //border: 2px solid crimson;
+        // display:block;
+    }
+    .header{
+        padding: 10px 0px;
+        //background-color: rgba(77, 139, 141, 0.52);
+        max-width: 900px;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align:center;
+    padding: 18px 30px;
+    text-transform:uppercase;
+    color:white;
+    background-color: $mainColor;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.gallery{
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.gallery-item{
+    height: 345px;
+    background-color: white;
+    width: 270px;
+    img{
+        max-width: 100%;
+    }
+    &:hover{
+        box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #787878;
+        padding: 26px;
+        font-weight: 400;
+        &:hover{
+            color: #0022ff;
+        }
+    }
+}
+
+
+/* .notes{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+     ps spacinimo reiksme lygi x/1000 ten kur VA parasyta ir tarpai tarp eiliu cia kur "characters"
+} */
