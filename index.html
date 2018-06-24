@@ -6,19 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/icons/icons.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:400,400i|Raleway:400,600,700|Roboto+Condensed:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CPlayfair+Display:400,400i%7CRaleway:400,600,700%7CRoboto+Condensed:700" rel="stylesheet">
     </head>
     <body>
-        fb 
-            <div id="fb-root"></div>
+        <!-- Initialize fb sdk -->
             <script>(function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];
               if (d.getElementById(id)) return;
               js = d.createElement(s); js.id = id;
               js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
               fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+            }(document, 'script', 'facebook-jssdk'));
+            console.log("js working")</script>
 
+        <!-- Hero element -->
         <div class="hero" id="hero">
             <div class="container">
                 <div class="nav-bar flex">
@@ -75,12 +76,12 @@
                 </div>
             </div>
             <div class="right">
-                    <iframe width="500" height="300" src="https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe width="500" height="300" style="border: 0px;" src="https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1" allowfullscreen></iframe>
             </div>
         </div>
 
         <!-- Updates -->
-        <div class="updates container">
+        <div class="updates container flex">
             <div class="header">
                 <h3>Latest updates</h3>
                 <span class="icon-cancel-circle x-icon"></span>
@@ -88,19 +89,19 @@
             <div class="gallery flex">
                 <div class="gallery-item">
                     <a>
-                        <img src="assets/images/gallery1.jpg">
+                        <img src="assets/images/gallery1.jpg" alt="gal1">
                         <h2>Ellie Turner and Jobe Harris have taken out the 2016 British National Surf Championships</h2>
                     </a>
                 </div>
                 <div class="gallery-item">
                     <a>
-                        <img src="assets/images/gallery2.jpg">
+                        <img src="assets/images/gallery2.jpg" alt="gal2">
                         <h2>A large group of surfers invaded the coast of La Jolla Shores, in California, with a single goal in mind</h2>
                     </a>
                 </div>
                 <div class="gallery-item">
                     <a>
-                        <img src="assets/images/gallery3.jpg">
+                        <img src="assets/images/gallery3.jpg" alt="gal3">
                         <h2>Surfboards are constantly evolving, and there are multiple board designs for a broad range of environments</h2>
                     </a>
                 </div>
@@ -111,16 +112,29 @@
             </div>
         </div>
 
-        <!-- Social networls -->
-        <div class="social" id="social">
-            <div class="left">
-                <div class="instagram"></div>
-            </div>
-            <div class="right">
-                <div class="facebook">
-                    <div class="fb-page" data-href="https://www.facebook.com/Surferscompany/" data-tabs="timeline" data-width="350" data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Surferscompany/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Surferscompany/">Surfers Company</a></blockquote></div>
+        <!-- Social networks -->
+        <div class="container">
+            <div class="social flex" id="social">
+                <div class="left">
+                        <div class="instagram">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BaVGddsFtE6/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BaVGddsFtE6/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by &#34;서퍼스코&#34; 고고비치 자체제작 래쉬가드 브랜드 (@surfersco_official)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-10-17T00:53:00+00:00">Oct 16, 2017 at 5:53pm PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+                        </div>
+                </div>
+                <div class="right">
+                    <div class="facebook">
+                        <div style="margin: 100px 50px auto 50px" class="fb-page" 
+                            data-href="https://www.facebook.com/Surferscompany/"
+                            data-width="340" 
+                            data-hide-cover="false"
+                            data-adapt-container-width="true"
+                            data-show-facepile="true">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Javascript files -->
+        <script src="assets/scripts/main.js"></script>
     </body>
 </html>

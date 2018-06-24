@@ -99,11 +99,12 @@ body {
   color: white;
 }
 
-.social span {
+.social {
   color: #fff;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 80px;
 }
 
 .icon-black-circe {
@@ -136,7 +137,7 @@ body {
   z-index: 1;
 }
 
-.left {
+.about-us .left {
   background-color: #fff;
   margin: 300px 0px 0px 0px;
   width: 50%;
@@ -179,21 +180,27 @@ h3 {
   font-size: 16px;
 }
 
-.right iframe {
+.about-us iframe {
   margin: 560px 0px 0px 70px;
 }
 
 .updates {
-  max-width: 900px;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .updates .header {
   padding: 10px 0px;
   max-width: 900px;
+  margin: auto;
 }
 
 .center {
-  text-align: center;
+  margin: auto;
 }
 
 .link {
@@ -209,9 +216,9 @@ h3 {
 }
 
 .gallery {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 20px 0px;
 }
 
@@ -219,6 +226,7 @@ h3 {
   height: 345px;
   background-color: white;
   width: 270px;
+  margin: 0px 15px;
 }
 
 .gallery-item img {
@@ -241,6 +249,14 @@ h3 {
 
 .gallery-item h2:hover {
   color: #0022ff;
+}
+
+.facebook {
+  background-image: url("../images/fbbg.jpg");
+  background-repeat: no-repeat;
+  min-width: 440px;
+  margin: 60px auto;
+  height: 380px;
 }
 
 /* .notes{
