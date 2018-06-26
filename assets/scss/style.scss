@@ -12,6 +12,10 @@ $mainColor: #00b0ff;
     display: flex;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 .logo {
     align-self:center;
 }
@@ -19,7 +23,6 @@ $mainColor: #00b0ff;
 .container {
     max-width:1170px;
     margin: 0 auto;
-    padding: 0px 15px;
     //background-color: lightcoral;
 }
 
@@ -37,7 +40,7 @@ $mainColor: #00b0ff;
     height:300px;
     text-align: center;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.16);
+    color: rgba(0, 0, 0, 0.075);
     transform: translateY(140px);
 }   
 
@@ -51,7 +54,6 @@ $mainColor: #00b0ff;
     align-items: center;
     padding: 0px;
     margin: 0px;
-    
 }
 
 .button {
@@ -89,10 +91,9 @@ $mainColor: #00b0ff;
     }
 }
 
-.social {
+.social-icons {
     color: #fff;
     justify-content: center;
-    padding: 80px;
 }
 
 .icon-black-circe {
@@ -121,20 +122,14 @@ $mainColor: #00b0ff;
     margin-bottom: 430px;
     position: relative;
     z-index: 1;
+    .left{
+        background-color: #fff;
+        margin: 300px 0px 0px 0px;
+        width: 50%;
+        justify-content: right;
+    }
 }
 
-.about-us .left {
-    background-color: #fff;
-    margin: 300px 0px 0px 0px;
-    width: 50%;
-    justify-content: right;
-}
-
-.left-box {
-    max-width: 360px;
-    float: right;
-    margin: 100px 120px 10px 10px;
-}
 
 h3{
     font-family: 'Montserrat', sans-serif;
@@ -151,6 +146,9 @@ h3{
 }
 
 .left-box {
+    max-width: 360px;
+    float: right;
+    margin: 100px 120px 10px 10px;
     p{
         font-family: 'Playfair Display', serif;
         size: 22px;
@@ -199,18 +197,19 @@ h3{
     background-color: $mainColor;
     display: inline-block;
     text-decoration: none;
+    margin: 25px auto;
 }
 
 .gallery{
     justify-content: center;
-    margin: 20px 0px;
+    //margin: 20px 0px;
 }
 
 .gallery-item{
     height: 345px;
     background-color: white;
     width: 270px;
-    margin: 0px 15px;
+    margin: 15px 15px;
     img{
         max-width: 100%;
     }
@@ -230,17 +229,88 @@ h3{
     }
 }
 
+.social {
+    .left{
+        width: 585px;
+        max-height: 675px; // 897 max instagram height - 225 dizaine footer uzlipimo aukstis -(897-746)
+    }
+    .right{
+        min-width: 440px;
+        max-width: 585px;
+        margin: 0px auto;
+    }
+}
 
+.instagram {
+    //padding: 40px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: none;
+}
 
 .facebook {
     background-image: url("../images/fbbg.jpg");
     background-repeat: no-repeat;
     min-width: 440px;
-    margin: 60px auto;
-    height: 380px;
+    margin: 170px auto 0px;
+    height: 390px;
 }
 
+.fb-page{
+    margin: 100px 50px auto 50px;
+}
 
+.instagram-letters {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.075); 
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3); //temp
+    transform: translateY(30px);
+}
+
+footer {
+    background-color: black; 
+    height: 420px;
+    .boxas{
+        flex-direction: column;
+        align-items: flex-end;
+        
+    }
+}
+
+.boxas .panel {
+    flex-direction: column;
+    flex-wrap: wrap;
+    //background-color: lightblue; //debug
+    height: 200px;
+    width: 300px;
+    margin: 45px 200px 0px 50px;
+    .list-item{
+        margin: 0px 40px 30px 0px;
+    }
+    a{
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        color: white;
+        font-weight: regular;
+    }
+}
+.boxas .newsletter{
+    width: 300px;
+    margin: 45px 200px 0px 50px;
+    h2{
+        color:white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: regular;
+    }
+}
+//parentas ir childas koks ju display
 
 
 /* .notes{

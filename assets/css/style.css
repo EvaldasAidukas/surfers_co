@@ -13,6 +13,11 @@ body {
   display: flex;
 }
 
+.wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .logo {
   -ms-flex-item-align: center;
   align-self: center;
@@ -21,7 +26,6 @@ body {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0px 15px;
 }
 
 .hero {
@@ -38,7 +42,7 @@ body {
   height: 300px;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.16);
+  color: rgba(0, 0, 0, 0.075);
   -webkit-transform: translateY(140px);
   -ms-transform: translateY(140px);
   transform: translateY(140px);
@@ -99,12 +103,11 @@ body {
   color: white;
 }
 
-.social {
+.social-icons {
   color: #fff;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 80px;
 }
 
 .icon-black-circe {
@@ -146,12 +149,6 @@ body {
   justify-content: right;
 }
 
-.left-box {
-  max-width: 360px;
-  float: right;
-  margin: 100px 120px 10px 10px;
-}
-
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
@@ -164,6 +161,12 @@ h3 {
   text-align: center;
   display: block;
   margin: 10px;
+}
+
+.left-box {
+  max-width: 360px;
+  float: right;
+  margin: 100px 120px 10px 10px;
 }
 
 .left-box p {
@@ -213,20 +216,20 @@ h3 {
   background-color: #00b0ff;
   display: inline-block;
   text-decoration: none;
+  margin: 25px auto;
 }
 
 .gallery {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 20px 0px;
 }
 
 .gallery-item {
   height: 345px;
   background-color: white;
   width: 270px;
-  margin: 0px 15px;
+  margin: 15px 15px;
 }
 
 .gallery-item img {
@@ -251,12 +254,98 @@ h3 {
   color: #0022ff;
 }
 
+.social .left {
+  width: 585px;
+  max-height: 675px;
+}
+
+.social .right {
+  min-width: 440px;
+  max-width: 585px;
+  margin: 0px auto;
+}
+
+.instagram {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
 .facebook {
   background-image: url("../images/fbbg.jpg");
   background-repeat: no-repeat;
   min-width: 440px;
-  margin: 60px auto;
-  height: 380px;
+  margin: 170px auto 0px;
+  height: 390px;
+}
+
+.fb-page {
+  margin: 100px 50px auto 50px;
+}
+
+.instagram-letters {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 90px;
+  color: rgba(0, 0, 0, 0.075);
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+}
+
+footer {
+  background-color: black;
+  height: 420px;
+}
+
+footer .boxas {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.boxas .panel {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 200px;
+  width: 300px;
+  margin: 45px 200px 0px 50px;
+}
+
+.boxas .panel .list-item {
+  margin: 0px 40px 30px 0px;
+}
+
+.boxas .panel a {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: white;
+  font-weight: regular;
+}
+
+.boxas .newsletter {
+  width: 300px;
+  margin: 45px 200px 0px 50px;
+}
+
+.boxas .newsletter h2 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: regular;
 }
 
 /* .notes{
