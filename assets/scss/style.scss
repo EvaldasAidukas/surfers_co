@@ -8,6 +8,11 @@ $mainColor: #00b0ff;
     cursor: pointer;
 }
 
+@mixin secondaryHover{
+    box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
 .flex {
     display: flex;
 }
@@ -106,9 +111,11 @@ $mainColor: #00b0ff;
 }
 
 .store {
-    background-image: url("../images/card.jpg");
-    background-repeat: no-repeat;
-    background-color: #fff;
+    $treshold : 37%;
+
+    background: $mainColor;
+    background: linear-gradient(135deg, $mainColor 0%, $mainColor $treshold, rgba(255,255,255,1) $treshold, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeff', endColorstr='#ffffff', GradientType=1 );
     max-width: 1028px;
     min-height: 600px;
     margin: 0px auto;
@@ -119,7 +126,7 @@ $mainColor: #00b0ff;
     background-image: url(../images/about.jpg);
     background-repeat: no-repeat;
     min-height: 100vh;
-    margin-bottom: 430px;
+    margin-bottom: 200px;
     position: relative;
     z-index: 1;
     .left{
@@ -170,7 +177,6 @@ h3{
 }
 
 .updates{
-    //max-width: 900px;
     justify-content: space-around;
     flex-direction: column;
     .header{
@@ -179,8 +185,6 @@ h3{
         max-width: 900px;
         margin: auto;
     }
-    
-    //height: 1200px;
 }
 
 .center{
@@ -198,6 +202,9 @@ h3{
     display: inline-block;
     text-decoration: none;
     margin: 25px auto;
+    &:hover{
+        @include secondaryHover();
+    }
 }
 
 .gallery{
@@ -210,29 +217,26 @@ h3{
     background-color: white;
     width: 270px;
     margin: 15px 15px;
+    color: #787878;
     img{
         max-width: 100%;
     }
     &:hover{
-        box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
+        @include secondaryHover();
+        color: #0022ff !important;
     }
     h2{
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
-        color: #787878;
         padding: 26px;
         font-weight: 400;
-        &:hover{
-            color: #0022ff;
-        }
     }
 }
 
 .social {
     .left{
         width: 585px;
-        max-height: 675px; // 897 max instagram height - 225 dizaine footer uzlipimo aukstis -(897-746)
+        max-height: 555px; // 897 max instagram height - 225 dizaine footer uzlipimo aukstis -151(897-746)
     }
     .right{
         min-width: 440px;
@@ -246,7 +250,7 @@ h3{
     width: 100%;
     position: relative;
     z-index: 1;
-    display: none;
+    //display: none;
 }
 
 .facebook {
@@ -268,7 +272,7 @@ h3{
     color: rgba(0, 0, 0, 0.075); 
     text-align: center;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.3); //temp
+    //color: rgba(0, 0, 0, 0.3); //temp
     transform: translateY(30px);
 }
 
@@ -302,7 +306,7 @@ footer {
 }
 .boxas .newsletter{
     width: 300px;
-    margin: 45px 200px 0px 50px;
+    margin: 45px 200px 45px 50px;
     h2{
         color:white;
         font-family: 'Montserrat', sans-serif;
@@ -310,8 +314,50 @@ footer {
         font-weight: regular;
     }
 }
-//parentas ir childas koks ju display
 
+.newsletter {
+    .email-input{
+        border: 0px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        background-color: #000;
+        width: 230px;
+        padding-bottom: 8px;
+        //transform: translateY(4px);
+    }
+    .email-submit{
+        background-color: $mainColor;
+        border-radius: 64px;
+        border-width: 0px;
+        padding: 12px;
+        width: 4px;
+        height: 4px;
+        margin-bottom: 4px;
+        float: right;
+    }
+
+    .input-form{
+        border: 2px solid #4d4d4d;
+        border-width: 0px 0px 2px 0px;
+        width: 300px;
+    }
+
+    .icon-envelop {
+        color:#4d4d4d;
+        padding-top: 3px;
+        vertical-align: center;
+        display: inline;
+    }
+}
+// focus arba active
+
+// parentas ir childas koks ju display
+// uzvedus pele ant gallery elemento uzsidegtu tekstas
+// idet i inputa, ikonas
+// ka reiskia virsutiniai mygtukai fb inst
+// ar ant bangeliu turi but kursorius
+
+//spana isidet <a> <img> <span>
 
 /* .notes{
     font-family: 'Montserrat', sans-serif;
