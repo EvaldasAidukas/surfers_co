@@ -35,6 +35,11 @@ body {
   min-height: 100vh;
 }
 
+.hero .social-icons a {
+  color: white;
+  text-decoration: none;
+}
+
 .about-us-letters {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -126,29 +131,107 @@ body {
   background: -o-linear-gradient(315deg, #00b0ff 0%, #00b0ff 37%, white 37%, white 100%);
   background: linear-gradient(135deg, #00b0ff 0%, #00b0ff 37%, white 37%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeff', endColorstr='#ffffff', GradientType=1 );
-  max-width: 1028px;
+  max-width: 1030px;
   min-height: 600px;
   margin: 0px auto;
   -webkit-box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
   box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
 }
 
+.store .board-gallery {
+  width: 50%;
+}
+
+.store .board-info {
+  width: 50%;
+  padding: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.store .board-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.store .description {
+  font-size: 16px;
+  color: #787878;
+}
+
+.stars span {
+  color: gold;
+}
+
+.price p {
+  display: inline;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.view-link {
+  padding-top: 80px;
+  display: block;
+}
+
+.view-link a {
+  color: #00b0ff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.section {
+  padding: 10px 0px;
+  border: 1px solid gray;
+  border-width: 0px 0px 1px 0px;
+}
+
+.section li {
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 30px;
+  text-transform: uppercase;
+}
+
 .about-us {
   background-image: url(../images/about.jpg);
   background-repeat: no-repeat;
   min-height: 100vh;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   position: relative;
   z-index: 1;
+  padding-top: 300px;
 }
 
 .about-us .left {
   background-color: #fff;
-  margin: 300px 0px 0px 0px;
   width: 50%;
   -webkit-box-pack: right;
   -ms-flex-pack: right;
   justify-content: right;
+}
+
+.about-us .bg {
+  position: relative;
+}
+
+.about-us .bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+}
+
+.about-us iframe {
+  margin: 260px 0px 0px 70px;
 }
 
 h3 {
@@ -167,8 +250,10 @@ h3 {
 
 .left-box {
   max-width: 360px;
-  float: right;
-  margin: 100px 120px 10px 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 100px auto;
 }
 
 .left-box p {
@@ -177,16 +262,13 @@ h3 {
   font-style: italic;
   font-size: 22px;
   line-height: calc(36/22);
+  font-weight: 400;
 }
 
 .left-box a {
   font-family: 'Montserrat', sans-serif;
   color: #00b0ff;
   font-size: 16px;
-}
-
-.about-us iframe {
-  margin: 560px 0px 0px 70px;
 }
 
 .updates {
@@ -261,7 +343,7 @@ h3 {
 
 .social .left {
   width: 585px;
-  max-height: 555px;
+  max-height: 585px;
 }
 
 .social .right {
@@ -328,20 +410,22 @@ footer .boxas {
 }
 
 .boxas .panel .list-item {
-  margin: 0px 40px 30px 0px;
+  margin: 0px 40px 25px 0px;
+  text-decoration: none;
+  display: block;
 }
 
-.boxas .panel a {
-  text-decoration: none;
+.boxas .panel p {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   color: white;
   font-weight: regular;
+  display: inline;
 }
 
 .boxas .newsletter {
   width: 300px;
-  margin: 45px 200px 45px 50px;
+  margin: 50px 200px 50px 50px;
 }
 
 .boxas .newsletter h2 {
@@ -351,24 +435,44 @@ footer .boxas {
   font-weight: regular;
 }
 
+.newsletter .icon-envelop {
+  color: #4d4d4d;
+  padding-top: 3px;
+  padding-right: 8px;
+  vertical-align: center;
+  display: inline;
+}
+
 .newsletter .email-input {
   border: 0px;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
-  background-color: #000;
-  width: 230px;
-  padding-bottom: 8px;
+  background-color: transparent;
+  width: 200px;
+  padding-bottom: 4px;
+  margin-right: auto;
+}
+
+.newsletter .email-input:focus {
+  background-color: transparent;
+}
+
+.newsletter .email-input:active, .newsletter .email-input:hover {
+  background-color: transparent;
+  color: white;
 }
 
 .newsletter .email-submit {
   background-color: #00b0ff;
   border-radius: 64px;
   border-width: 0px;
-  padding: 12px;
-  width: 4px;
-  height: 4px;
+  width: 23px;
+  height: 23px;
+  padding: 5px;
   margin-bottom: 4px;
-  float: right;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .newsletter .input-form {
@@ -377,10 +481,12 @@ footer .boxas {
   width: 300px;
 }
 
-.newsletter .icon-envelop {
-  color: #4d4d4d;
-  padding-top: 4px;
-  vertical-align: center;
+.newsletter .icon-arrow-right2 {
+  color: white;
+}
+
+.newsletter .icon-arrow-right2:hover {
+  cursor: pointer;
 }
 
 /* .notes{

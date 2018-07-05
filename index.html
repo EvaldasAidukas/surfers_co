@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/icons/icons.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CPlayfair+Display:400,400i%7CRaleway:400,600,700%7CRoboto+Condensed:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700%7CPlayfair+Display:400,400i%7CRaleway:400,600,700%7CRoboto+Condensed:700" rel="stylesheet">
     </head>
     <body>
         <!-- Initialize fb sdk -->
@@ -32,20 +32,20 @@
                         <li><a href="#about-us" class="button">Blog</a></li>
                         <li><a href="#about-us" class="button">Technology</a></li>
                         <li><a href="#about-us" class="button">Team</a></li>
-                        <li><a href="#about-us" class="button">Dealers</a></li>
+                        <li><a href="#footer" class="button">Dealers</a></li>
                     </ul>
                     <div class="social-icons flex">
-                        <div class="icon-black-circe">
+                        <a href="https://www.facebook.com/Surferscompany/" target="_blank" class="icon-black-circe">
                             <span class="icon-facebook"></span>
-                        </div>
+                        </a>
                         
-                        <div class="icon-black-circe">
+                        <a href="https://www.instagram.com/explore/tags/surfersco/?hl=en" target="_blank" class="icon-black-circe">
                             <span class="icon-instagram"></span>
-                        </div>
+                        </a>
                         
-                        <div class="icon-black-circe">
+                        <a href="mailto:surfers@co.co" target="_blank" class="icon-black-circe">
                             <span class="icon-envelop"></span>
-                        </div>
+                        </a>
                         
                     </div>
                 </div>
@@ -53,12 +53,30 @@
                     <h1><i>Ride every wave as if it's your last</i></h1>
                     <h2><i>We love the motion of the ocean</i></h2>
                 </div>
-                <div class="">
-                    <div class="store" id="store">
-                        <div class="board-gallery"></div>
-                        <div class="board-info"></div>
+                    <div class="store flex" id="store">
+                        <div class="board-gallery">
+
+                        </div>
+                        <div class="board-info">
+                            <h2>JR Surfboards The Donny Stoker Yellow/Green Rail Fade</h2>
+                            <div class="stars"><span>&#9733&#9733&#9733&#9733</span>&#9734 (52)</div>
+                            <ul class="section flex">
+                                <li>Description</li>
+                                <li>Features</li>
+                                <li>Dimensions</li>
+                            </ul>
+                            <div class="description">
+                                    Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.
+                            </div>
+                            <div class="price">
+                                <p>$499.99</p>
+                                <a href="#" class="link" >Buy now</a>
+                            </div>
+                            <div class="view-link">
+                                <a href="#" >View all boards</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 <div class="about-us-letters">
                     ABOUT US
                 </div>
@@ -66,17 +84,21 @@
         </div>
 
         <!-- About us -->
-        <div class="about-us flex" id="about-us">
-            <div class="left">
-                <div class="left-box">
-                    <h3>We are Surfers co.</h3>
-                    <span class="icon-cancel-circle x-icon"></span>
-                    <p>Lorem ipsum dolor sit amet, aeneam consectetur adipiscing elit. Fusce iaculis feugiat arcunum fermentum hendrerit. Suspendisse auctor labor nisi, et interdum diam facilisis, aliquam pulvinar semi egetis belle sollicitudin ut. Nullam tincidun finibustus scelerisque.</p>
-                    <a href="google.com" target="_blank">Read more</a>
+        <div class="about-us" id="about-us">
+            <div class="bg">
+                <div class="container flex wrap">
+                    <div class="left">
+                        <div class="left-box">
+                            <h3>We are Surfers co.</h3>
+                            <span class="icon-cancel-circle x-icon"></span>
+                            <p>Lorem ipsum dolor sit amet, aeneam consectetur adipiscing elit. Fusce iaculis feugiat arcunum fermentum hendrerit. Suspendisse auctor labor nisi, et interdum diam facilisis, aliquam pulvinar semi egetis belle sollicitudin ut. Nullam tincidun finibustus scelerisque.</p>
+                            <a href="google.com" target="_blank">Read more</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                            <iframe width="500" height="300" style="border: 0px;" src="https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1" allowfullscreen></iframe>
+                    </div>
                 </div>
-            </div>
-            <div class="right">
-                    <iframe width="500" height="300" style="border: 0px;" src="https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -146,51 +168,51 @@
         </div>
 
         <!-- footer section -->
-        <footer>
+        <footer id="footer">
             <div class="container">
                 <div class="boxas flex">
                     <div class="panel flex">
-                        <div class="list-item">
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">About</a>
-                        </div>
-                        <div class="list-item">
+                            <p>About</p>
+                        </a>
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">Boards</a>
-                        </div>
-                        <div class="list-item">
+                            <p  >Boards</p>
+                        </a>
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">Accesories</a>
-                        </div>
-                        <div class="list-item">
+                            <p  >Accesories</p>
+                        </a>
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">Blog</a>
-                        </div>
-                        <div class="list-item">
+                            <p  >Blog</p>
+                        </a>
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">Technology</a>
-                        </div>
-                        <div class="list-item">
+                            <p  >Technology</p>
+                        </a>
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">Team</a>
-                        </div>
-                        <div class="list-item">
+                            <p  >Team</p>
+                        </a>
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">Dealers</a>
-                        </div>
-                        <div class="list-item">
+                            <p  >Dealers</p>
+                        </a>
+                        <a class="list-item" href="#hero">
                             <img src="assets/images/wave1.png" alt="wave">
-                            <a href="#hero">Contact Us</a>
-                        </div>
+                            <p  >Contact Us</p>
+                        </a>
                     </div>
                     <div class="newsletter">
                         <h2>Subscribe to our newsletter</h2>
-                        <form class="input-form" action="">
+                        <form class="input-form flex" action="">
                             <span class="icon-envelop"></span>
                             <input type="email" placeholder="Your e-mail" class="email-input" name="email">
-                            <div class=""></div>
-                                <button type="submit" class="email-submit" value=""></button>
-                            </div>
+                                <button type="submit" class="email-submit" value="">
+                                    <span class="icon-arrow-right2"></span>
+                                </button>
                           </form>
                     </div>
                 </div>
@@ -198,6 +220,7 @@
         </footer>
 
         <!-- Javascript files -->
+        <script src="assets/scripts/jquery-1.12.4.min.js"></script>
         <script src="assets/scripts/main.js"></script>
     </body>
 </html>
