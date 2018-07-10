@@ -41,6 +41,7 @@ $mainColor: #00b0ff;
         color: white;
         text-decoration: none;
     }
+    //min-height!!!
 }
 
 .about-us-letters{
@@ -117,7 +118,7 @@ $mainColor: #00b0ff;
 
 .store {
     $treshold : 37%;
-
+    justify-content: center;
     background: $mainColor;
     background: linear-gradient(135deg, $mainColor 0%, $mainColor $treshold, rgba(255,255,255,1) $treshold, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeff', endColorstr='#ffffff', GradientType=1 );
@@ -128,13 +129,39 @@ $mainColor: #00b0ff;
     
     .board-gallery{
         width:50%;
+        max-height: 600px;
         //padding: 50px;
+        .big-image{
+            max-width: 450px;
+            min-width: 250px;
+            //padding: 70px auto;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+            img{
+                display: block;
+                width: 120px;
+            }
+        }
+        .gallery-images{
+            flex-direction: column;
+            justify-content: center;
+            img{
+                border: 1px solid gray;
+                margin: 2px 0px;
+                padding: 0px;
+                width: 70px;
+                height: 70px;
+            }
+        }
     }
     .board-info{
         //margin-right: auto;
         width: 50%;
+        min-width: 440px;
         padding: 50px;
         font-family: 'Montserrat', sans-serif;
+        flex-direction: column;
         h2{
             font-size: 20px;
             font-weight: bold;
@@ -146,6 +173,7 @@ $mainColor: #00b0ff;
         color: #787878;
     }
 }
+
 
 .stars span{
     color: gold;
@@ -185,10 +213,10 @@ $mainColor: #00b0ff;
 }
 
 .about-us {
-    background-image: url(../images/about.jpg);
+    background-image: url("../images/about.jpg");
     background-repeat: no-repeat;
     min-height: 100vh;
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
     position: relative;
     z-index: 1;
     padding-top: 300px;
@@ -210,13 +238,115 @@ $mainColor: #00b0ff;
             z-index: -1;
         }
     }
+    iframe{
+        margin: 260px 0px 0px 70px;
+        // justify-content: right;
+        // align-self: flex-end;
+        box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
+    }
+    .right{
+        // /align-self: end;
+    }
 }
 
-.about-us iframe{
-    margin: 260px 0px 0px 70px;
-
+.team{
+    min-height: 580px;
+    //margin: 0px;
+    align-items: center;
+    .icon-circle{
+        min-width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
+        justify-content: center;
+        align-items: center;
+        margin:15px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .icon-arrow-left2{
+        color:#0022ff;
+    }
+    .icon-arrow-right2{
+        color:#0022ff;
+    }
+    .member{
+        list-style: none;
+        padding: 0px;
+        justify-content: center;
+        li{
+            margin: 10px -10px;
+            position: relative;
+            &:nth-child(even){
+                transform: translateY(20px);
+            }
+            &:nth-child(odd){
+                transform: translateY(-20px);
+                z-index: 1;
+            }
+        }
+        
+    }
 }
 
+.team-member{
+    background-color: white;
+    width:260px;
+    height: 280px;    //260,280
+    box-shadow: 10px 17.321px 50px 0px rgba(0, 0, 0, 0.2);
+    border-radius:4px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;    
+    &:hover{
+        background-color:$mainColor;
+        //cursor: pointer; //        color: white;
+    } 
+    &:hover h2,&:hover div{
+        color: white;
+    } 
+    .member-name{
+        color:$mainColor;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: regular;
+        margin: 20px 0px 2px;
+    }
+    .round-image{
+        //background-image: url(../images/member1.jpg);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-position: center; //background-position: 100% 40%;
+        background-repeat: no-repeat;
+    }
+    .seconday-text{
+        color: #8c8c8c;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+    }
+}
+
+.our-team-letters{
+    padding-top: 40px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 190px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.05);
+    line-height: 0%;
+    transform: translateY(120px);
+    //margin: -40px 0px;
+}  
+
+.big-wave{
+    margin:18px 0px;
+}
+  
 h3{
     font-family: 'Montserrat', sans-serif;
     font-size:18px;
@@ -313,7 +443,9 @@ h3{
 .social {
     .left{
         width: 585px;
+        min-width: 380px;
         max-height: 585px; // 897 max instagram height - 225 dizaine footer uzlipimo aukstis -151(897-746)
+        margin: 0px auto;
     }
     .right{
         min-width: 440px;
@@ -333,8 +465,10 @@ h3{
 .facebook {
     background-image: url("../images/fbbg.jpg");
     background-repeat: no-repeat;
-    min-width: 440px;
-    margin: 170px auto 0px;
+    max-width: 440px;
+    min-width: 340px;
+    align-self: center;
+    margin: 170px 10px 0px;
     height: 390px;
 }
 
@@ -464,5 +598,18 @@ footer {
     font-family: 'Playfair Display', serif;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'PT Sans', sans-serif; paansiausias i myriad pro
      ps spacinimo reiksme lygi x/1000 ten kur VA parasyta ir tarpai tarp eiliu cia kur "characters"
 } */
+
+/* notes
+ar galiu span icona padidint
+team dalies responsive ir wp
+biski maziau scalint store dali
+carusele su thumbnailas store dalei
+store desinei dalei nusokus bus 100% is 50%
+600, 800 width ekrano
+per html nurodyt team mem
+owl crousel team dalei
+
+*/

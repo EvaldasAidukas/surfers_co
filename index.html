@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Surfers Co</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" href="assets/icons/icons.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700%7CPlayfair+Display:400,400i%7CRaleway:400,600,700%7CRoboto+Condensed:700" rel="stylesheet">
+        <link rel="stylesheet" href="assets/scripts/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/scripts/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700%7CPlayfair+Display:400,400i%7CRaleway:400,600,700%7CRoboto+Condensed:700%7PT+Sans:400,700" rel="stylesheet">
     </head>
     <body>
         <!-- Initialize fb sdk -->
@@ -54,10 +56,19 @@
                     <h2><i>We love the motion of the ocean</i></h2>
                 </div>
                     <div class="store flex" id="store">
-                        <div class="board-gallery">
-
+                        <div class="board-gallery flex">
+                            <div class="big-image flex">
+                                <img src="assets/images/board1.png" alt="board1">
+                            </div>
+                            <div class="gallery-images flex">
+                                <img src="assets/images/small/board1.png" alt="img1">
+                                <img src="assets/images/small/board2.png" alt="img2">
+                                <img src="assets/images/small/board3.png" alt="img3">
+                                <img src="assets/images/small/board4.png" alt="img4">
+                                <img src="assets/images/small/board5.png" alt="img5">
+                            </div>
                         </div>
-                        <div class="board-info">
+                        <div class="board-info flex">
                             <h2>JR Surfboards The Donny Stoker Yellow/Green Rail Fade</h2>
                             <div class="stars"><span>&#9733&#9733&#9733&#9733</span>&#9734 (52)</div>
                             <ul class="section flex">
@@ -86,7 +97,7 @@
         <!-- About us -->
         <div class="about-us" id="about-us">
             <div class="bg">
-                <div class="container flex wrap">
+                <div class="container flex ">
                     <div class="left">
                         <div class="left-box">
                             <h3>We are Surfers co.</h3>
@@ -95,12 +106,57 @@
                             <a href="google.com" target="_blank">Read more</a>
                         </div>
                     </div>
-                    <div class="right">
+                    <div class="right flex">
                             <iframe width="500" height="300" style="border: 0px;" src="https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- team carousel-->
+        <div class="container fix-padding">
+            <div class="our-team-letters">Our team</div>
+                <div class="team flex" id="team">
+                    <div class="icon-circle flex">
+                        <span class="icon-arrow-left2"></span>
+                    </div>
+                    <ul class="owl-carousel flex wrap"> 
+                        <li><a href="#" class="team-member flex">
+                            <div style='background-image: url(assets/images/member1.jpg);' class="round-image"></div>
+                            <h2 class="member-name">Taj Burrow</h2>
+                            <div class="seconday-text">@tajamos</div> 
+                            <img class="big-wave" src="assets/images/wave2.png" alt="wave">
+                            <div class="seconday-text"><span class="icon-location"></span> Yallingup, Australia</div>
+                        </a></li>
+                        <li><a href="#" class="team-member flex">
+                            <div style='background-image: url(assets/images/member2.jpg);' class="round-image" ></div>
+                            <h2 class="member-name">Taj Burrow</h2>
+                            <div class="seconday-text">@tajamos</div> 
+                            <img class="big-wave" src="assets/images/wave2.png" alt="wave">
+                            <div class="seconday-text"><span class="icon-location"></span> Yallingup, Australia</div>
+                        </a></li>
+                        <li><a href="#" class="team-member flex">
+                            <div style='background-image: url(assets/images/member3.jpg);' class="round-image" ></div>
+                            <h2 class="member-name">Taj Burrow</h2>
+                            <div class="seconday-text">@tajamos</div> 
+                            <img class="big-wave" src="assets/images/wave2.png" alt="wave">
+                            <div class="seconday-text"><span class="icon-location"></span> Yallingup, Australia</div>
+                        </a></li>
+                        <li><a href="#" class="team-member flex">
+                            <div style='background-image: url(assets/images/member4.jpg);' class="round-image" ></div>
+                            <h2 class="member-name">Taj Burrow</h2>
+                            <div class="seconday-text">@tajamos</div> 
+                            <img class="big-wave" src="assets/images/wave2.png" alt="wave">
+                            <div class="seconday-text"><span class="icon-location"></span> Yallingup, Australia</div>
+                        </a></li>
+                    </ul>
+
+
+                    <div class="icon-circle flex">
+                        <span class="icon-arrow-right2"></span>
+                    </div>
+                </div>
+            </div>
 
         <!-- Updates -->
         <div class="updates container flex">
@@ -108,7 +164,7 @@
                 <h3>Latest updates</h3>
                 <span class="icon-cancel-circle x-icon"></span>
             </div>
-            <div class="gallery flex wrap">
+            <div class="gallery flex">
                 <div class="gallery-item">
                     <a>
                         <img src="assets/images/gallery1.jpg" alt="gal1">
@@ -136,7 +192,7 @@
 
         <!-- Social networks -->
         <div class="container">
-            <div class="social flex wrap" id="social">
+            <div class="social flex" id="social">
                 <div class="left">
                         <div class="instagram-letters">
                             INSTAGRAM
@@ -221,6 +277,7 @@
 
         <!-- Javascript files -->
         <script src="assets/scripts/jquery-1.12.4.min.js"></script>
+        <script src="assets/scripts/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
         <script src="assets/scripts/main.js"></script>
     </body>
 </html>
