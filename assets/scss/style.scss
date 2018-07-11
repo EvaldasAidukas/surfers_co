@@ -23,8 +23,7 @@ $mainColor: #00b0ff;
 }
 
 .logo {
-    align-self:center;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .container {
@@ -66,6 +65,7 @@ $mainColor: #00b0ff;
 
 .nav-bar {
     justify-content: space-between;
+    align-items: center;
     padding: 32px 0px;
 }
 
@@ -83,7 +83,6 @@ $mainColor: #00b0ff;
     text-transform: uppercase;
     font-weight: 600;
     padding: 10px 10px;
-    margin: auto 2px;
     text-decoration: none;
     &:hover{
         @include mainHover();
@@ -143,33 +142,50 @@ $mainColor: #00b0ff;
     margin: 0px auto;
     box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
     
-    .board-gallery{
+    .board-gallery.owl-carousel{
         width:50%;
         max-height: 600px;
-        //padding: 50px;
-        .big-image{
-            max-width: 450px;
-            min-width: 250px;
-            //padding: 70px auto;
-            justify-content: center;
-            align-items: center;
-            margin: 0px auto;
-            img{
-                display: block;
-                width: 120px;
-            }
+        img{
+            width: auto !important;
+            max-width: 100% !important;
+            text-align: center;
+            height: 100%;
+            margin: 10px auto;
         }
-        .gallery-images{
-            flex-direction: column;
-            justify-content: center;
-            img{
+        .owl-dots{
+            margin: 0px !important;
+            width: 100%;
+            transform: translateY(-50px);
+            .small-img{
                 border: 1px solid gray;
-                margin: 2px 0px;
+                margin: 2px 2px !important;
                 padding: 0px;
-                width: 70px;
+                width: 70px !important;
                 height: 70px;
             }
         }
+        // .big-image{
+        //     max-width: 450px;
+        //     min-width: 200px;
+        //     justify-content: center;
+        //     align-items: center;
+        //     margin: 0px auto;
+        //     img{
+        //         display: block;
+        //         width: 120px;
+        //     }
+        // }
+        // .gallery-images{
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     img{
+        //         border: 1px solid gray;
+        //         margin: 2px 0px;
+        //         padding: 0px;
+        //         width: 70px;
+        //         height: 70px;
+        //     }
+        // }
     }
     .board-info{
         //margin-right: auto;
@@ -187,6 +203,7 @@ $mainColor: #00b0ff;
     .description{
         font-size: 16px;
         color: #787878;
+        padding-bottom: 12px;
     }
 }
 
@@ -615,36 +632,61 @@ footer {
     font-size: 3em;
     display: none;
     text-decoration: none;
+    margin-right: 20px;
   }
 
-@media screen and (max-width: 900px) {
-    .nav-bar{
-        position: sticky;
-    }
-    .nav-bar *:not(:first-child) {
-        display: none;
-    }
-    .nav-bar .icon {
-      float: right;
-      margin-right: 8px;
-      display: block;
-    }
-  }
+// @media screen and (max-width: 900px) {
+//     .nav-bar{
+//         position: sticky;
+//     }
+//     .nav-bar *:not(:first-child) {
+//         display: none;
+//     }
+//     .nav-bar .icon {
+//       //float: right;
+//       margin-right: 20px;
+//       display: block;
+//     }
+//   }
 
   @media screen and (max-width: 900px) {
-    .nav-bar.responsive {
-        position: relative;
+
+    .nav-list, .social-icons{
+        display: none;
+        flex-wrap: wrap;
     }
-    .nav-bar.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+
+    .nav-list.show{
+        display: block;
     }
-    .nav-bar.responsive ul,.nav-bar.responsive li {
-      float: none;
-      display: block;
-      text-align: left;
+
+    .menu-item{
+        width: 100%;
     }
+
+    .nav-bar .burger{
+        display: block;
+        text-align: right;
+    }
+
+    .logo{
+        padding-top: 20px;
+        align-self: flex-start;
+    }
+    
+    .nav-bar ul {
+      text-align: right;
+      align-self: flex-end;
+      margin: 20px 20px 0px 0px;
+    }
+
+    .nav-bar li {
+        height: 40px;
+        a{
+            font-size: 20px;
+        }
+    }
+
   }
   
   @media screen and (max-width: 900px) {
@@ -654,12 +696,13 @@ footer {
 
     .store{
         width: 90%;
-        .board-gallery{
-            width: 80%;
-            padding: 35px;
+        .board-gallery.owl-carousel{
+            //width: 80%;
+            margin: 35px;
+            width: 90%;
         }
         .board-info{
-            width: 90%;
+            min-width: 90%;
         }
     }
 
@@ -696,13 +739,91 @@ footer {
         align-items: center;
         justify-content: center;
         .panel{
-            margin: 45px 0px 0px 0px;
+            margin: 45px 10px 0px 10px;
+            p{
+                font-size: 17px;
+            }
         }
     }
     
   }
 
   @media screen and (max-width: 576px) {
+
+    .about-us-letters{
+        height: 150px;
+    }
+
+    .store{
+
+        .board-info{
+            min-width: 100%;
+            padding: 25px;
+        }
+        .section{
+            //flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        
+    }
+
+    .social {
+        .right{
+            min-width: 200px;
+        }
+        .left{
+            min-width: 200px;
+        }
+        .instagram{
+            min-width: 200px;
+        }
+    }
+
+    .boxas {
+        .newsletter{
+            width: 90%;
+            margin:  0px;
+            h2{
+                font-size: 20px;
+            }
+            .email-input{
+                font-size: 18px;
+            }
+            .email-submit{
+                width: 45px;
+                height: 45px;
+            }
+        }
+        .icon-envelop{
+            padding-top: 10px;
+            font-size: 25px;
+        }
+        .icon-arrow-right2{
+            font-size: 24px;
+        }
+        
+        .input-form{
+            width: 100%;
+        }
+        .panel{
+            padding: 0px 20px;
+            width: 100%;
+            max-height: 200px;
+            .list-item{
+                margin: 0px 0px 25px 0px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .facebook{
+        max-width: 300px;
+        min-width: 200px;
+        margin: 40px 0px 0px 0px;
+    }
 
     .gallery-images{
         display: none;

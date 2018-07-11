@@ -29,14 +29,21 @@
                     <a href="index.html" class="logo">
                         <img alt="Surfers Co" src="assets/images/logo.png">
                     </a>
-                    <ul class="nav-list flex">
-                        <li><a href="#hero" class="button">Boards</a></li>
-                        <li><a href="#store" class="button">Accecories</a></li>
-                        <li><a href="#about-us" class="button">Blog</a></li>
-                        <li><a href="#about-us" class="button">Technology</a></li>
-                        <li><a href="#about-us" class="button">Team</a></li>
-                        <li><a href="#footer" class="button">Dealers</a></li>
-                    </ul>
+                    <div>
+                        <a href="javascript:void(0);" class="icon burger">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <ul class="nav-list flex">
+                            <li><a href="#hero" class="button">Boards</a></li>
+                            <li><a href="#store" class="button">Accecories</a></li>
+                            <li><a href="#about-us" class="button">Blog</a></li>
+                            <li><a href="#about-us" class="button">Technology</a></li>
+                            <li><a href="#about-us" class="button">Team</a></li>
+                            <li><a href="#footer" class="button">Dealers</a></li>
+                        </ul>
+                    </div>
+
+
                     <div class="social-icons flex">
                         <a href="https://www.facebook.com/Surferscompany/" target="_blank" class="icon-black-circe">
                             <span class="icon-facebook"></span>
@@ -51,26 +58,25 @@
                         </a>
                         
                     </div>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
                 </div>
                 <div class="title">
                     <h1><i>Ride every wave as if it's your last</i></h1>
                     <h2><i>We love the motion of the ocean</i></h2>
                 </div>
                     <div class="store flex" id="store">
-                        <div class="board-gallery flex">
-                            <div class="big-image flex">
-                                <img src="assets/images/board1.png" alt="board1">
-                            </div>
-                            <div class="gallery-images flex">
+                        <div class="owl-carousel owl-theme board-gallery">
+                                <img src="assets/images/board1.png" data-dot="<img class='small-img' src='assets/images/board1.png'>" alt="board1">
+                                <img src="assets/images/board2.png" data-dot="<img class='small-img' src='assets/images/board2.png'>" alt="board2">
+                                <img src="assets/images/board3.png" data-dot="<img class='small-img' src='assets/images/board3.png'>" alt="board3">
+                                <img src="assets/images/board4.png" data-dot="<img class='small-img' src='assets/images/board4.png'>" alt="board4">
+                                <img src="assets/images/board5.png" data-dot="<img class='small-img' src='assets/images/board5.png'>" alt="board5">
+                            <!-- <div class="gallery-images flex">
                                 <img src="assets/images/small/board1.png" alt="img1">
                                 <img src="assets/images/small/board2.png" alt="img2">
                                 <img src="assets/images/small/board3.png" alt="img3">
                                 <img src="assets/images/small/board4.png" alt="img4">
                                 <img src="assets/images/small/board5.png" alt="img5">
-                            </div>
+                            </div> -->
                         </div>
                         <div class="board-info flex">
                             <h2>JR Surfboards The Donny Stoker Yellow/Green Rail Fade</h2>
@@ -128,7 +134,7 @@
                 <div class="team flex" id="team">
                     <button type="button" role="presentation" class="owl-prev"><span class="icon-arrow-left2"></span></button>
 
-                    <div class="owl-carousel"> 
+                    <div class="owl-carousel team-mates"> 
                         <div><a href="#" class="team-member flex">
                             <div style='background-image: url(assets/images/member1.jpg);' class="round-image"></div>
                             <h2 class="member-name">Taj Burrow</h2>
