@@ -174,19 +174,24 @@ body {
 }
 
 .store .board-gallery.owl-carousel .owl-dots {
-  margin: 0px !important;
+  margin: 0px;
   width: 100%;
-  -webkit-transform: translateY(-50px);
-  -ms-transform: translateY(-50px);
-  transform: translateY(-50px);
+  -webkit-transform: translateY(-80px);
+  -ms-transform: translateY(-80px);
+  transform: translateY(-80px);
 }
 
-.store .board-gallery.owl-carousel .owl-dots .small-img {
+.store .board-gallery.owl-carousel .owl-dots .owl-dot {
   border: 1px solid gray;
-  margin: 2px 2px !important;
+  margin: 0px 2px;
   padding: 0px;
-  width: 70px !important;
+  width: 70px;
   height: 70px;
+  background-color: white;
+}
+
+.store .board-gallery.owl-carousel .owl-dots .owl-dot .small-img {
+  margin: 0px;
 }
 
 .store .board-info {

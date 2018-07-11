@@ -43,15 +43,20 @@ $(document).ready(function(){
         autowidth:true,
         nav:false,
         dots:true,
+        items:1,
         singleItem: true,
-        pagination: true,
-        dotData: true,
         dotsData: true,
         responsive:{
             0:{
                 items:1
             }
         }
+    });
+
+    $('.section').on('click',function(){
+        console.log("pressed");
+        $(this).not().removeClass(".show");
+        $(this).addClass(".show");
     });
 
 });

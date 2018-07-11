@@ -153,15 +153,19 @@ $mainColor: #00b0ff;
             margin: 10px auto;
         }
         .owl-dots{
-            margin: 0px !important;
+            margin: 0px;
             width: 100%;
-            transform: translateY(-50px);
-            .small-img{
+            transform: translateY(-80px);
+            .owl-dot{
                 border: 1px solid gray;
-                margin: 2px 2px !important;
+                margin: 0px 2px;
                 padding: 0px;
-                width: 70px !important;
+                width: 70px;
                 height: 70px;
+                background-color:white;
+                .small-img{
+                    margin: 0px;
+                }
             }
         }
         // .big-image{
