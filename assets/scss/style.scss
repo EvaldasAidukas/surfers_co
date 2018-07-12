@@ -24,43 +24,40 @@ $mainColor: #00b0ff;
 
 .logo {
     padding-left: 20px;
+    align-self: flex-start;
 }
 
 .container {
     max-width:1170px;
     margin: 0 auto;
-    //background-color: lightcoral;
 }
 
 .hero{
     background-image: url("../images/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh; //!!!
     .social-icons a {
         color: white;
         text-decoration: none;
     }
-    //min-height!!!
 }
 
 .about-us-letters{
     height:300px;
     align-items: flex-end;
     justify-content: center;
-    //width: 900px;
-}
-
-.about-us-letters h4{
-    font-family: 'Montserrat', sans-serif;
-    display: block;
-    font-weight: bold;
-    font-size: 13vw; //196px;
-    margin: 0px;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.075);
-    line-height: 0px;
-    transform: translateY(-20px);
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        font-weight: bold;
+        font-size: 13vw; //196px;
+        margin: 0px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.075);
+        line-height: 0px;
+        transform: translateY(-20px);
+    }
 }   
 
 .nav-bar {
@@ -70,6 +67,8 @@ $mainColor: #00b0ff;
 }
 
 .nav-list {
+    //position: absolute;
+    //right: 0;
     list-style: none;
     align-items: center;
     padding: 0px;
@@ -118,7 +117,6 @@ $mainColor: #00b0ff;
 .icon-black-circe {
     background-color: #000;
     border-radius: 50%;
-    //display: inline;
     padding: 0px;
     align-self: center;
     margin: 0px 6px;
@@ -137,17 +135,58 @@ $mainColor: #00b0ff;
     background: $mainColor;
     background: linear-gradient(135deg, $mainColor 0%, $mainColor $treshold, rgba(255,255,255,1) $treshold, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeff', endColorstr='#ffffff', GradientType=1 );
-    max-width: 1030px;
-    min-height: 600px;
+    width: 90%;
+    //min-height: 600px;
     margin: 0px auto;
     box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
+
+    .stars span{
+        color: gold;
+    }
+    .price p{
+        display: inline;
+        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        margin-right: 25px;
+    }
+    .view-link{
+        padding-top:80px;
+        display: block;
+        a{
+            color: $mainColor;
+            font-size:16px;
+            font-weight: 500;
+        }
+    }
+    .section{
+        padding: 0px;
+        border: 1px solid gray;
+        border-width: 0px 0px 1px 0px;
+        li{
+            margin: 10px 0px;
+            list-style: none;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #a0a0a0;
+            padding-right: 30px;
+            text-transform: uppercase;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .show{
+            color: #000;
+        }
+    }
     
     .board-gallery.owl-carousel{
         width:50%;
         max-height: 600px;
         img{
-            width: auto !important;
-            max-width: 100% !important;
+            //width: 100%;
+            width: auto;// !important;
             text-align: center;
             height: 100%;
             margin: 10px auto;
@@ -155,7 +194,7 @@ $mainColor: #00b0ff;
         .owl-dots{
             margin: 0px;
             width: 100%;
-            transform: translateY(-80px);
+            transform: translateY(-100px);
             .owl-dot{
                 border: 1px solid gray;
                 margin: 0px 2px;
@@ -163,38 +202,20 @@ $mainColor: #00b0ff;
                 width: 70px;
                 height: 70px;
                 background-color:white;
+                background-size: cover;
+                span{
+                    display: none;
+                }
                 .small-img{
                     margin: 0px;
                 }
             }
         }
-        // .big-image{
-        //     max-width: 450px;
-        //     min-width: 200px;
-        //     justify-content: center;
-        //     align-items: center;
-        //     margin: 0px auto;
-        //     img{
-        //         display: block;
-        //         width: 120px;
-        //     }
-        // }
-        // .gallery-images{
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     img{
-        //         border: 1px solid gray;
-        //         margin: 2px 0px;
-        //         padding: 0px;
-        //         width: 70px;
-        //         height: 70px;
-        //     }
-        // }
     }
     .board-info{
         //margin-right: auto;
         width: 50%;
-        min-width: 440px;
+        //min-width: 440px;
         padding: 50px;
         font-family: 'Montserrat', sans-serif;
         flex-direction: column;
@@ -204,50 +225,18 @@ $mainColor: #00b0ff;
             margin-top: 0px;
         }
     }
-    .description{
+    .description, .features, .dimensions{
+        display: none;
         font-size: 16px;
         color: #787878;
         padding-bottom: 12px;
     }
-}
-
-
-.stars span{
-    color: gold;
-}
-
-.price p{
-    display: inline;
-    font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    margin-right: 25px;
-}
-
-.view-link{
-    padding-top:80px;
-    display: block;
-    a{
-        color: $mainColor;
-        font-size:16px;
-        font-weight: 500;
+    .visible{
+        display: block;
     }
 }
 
-.section{
-    padding: 10px 0px;
-    border: 1px solid gray;
-    border-width: 0px 0px 1px 0px;
-    li{
-        list-style: none;
-        font-family: 'Raleway', sans-serif;
-        font-size: 14px;
-        font-weight: bold;
-        padding-right: 30px;
-        text-transform: uppercase;
-    }
-
-}
+// about - us //
 
 .about-us {
     background-image: url("../images/about.jpg");
@@ -275,38 +264,45 @@ $mainColor: #00b0ff;
             z-index: -1;
         }
     }
-    iframe{
-        margin: 260px 0px 0px 70px;
-        // justify-content: right;
-        // align-self: flex-end;
-        box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
-        width: 400px; 
-        height: 270px;
-    }
     .right{
-        // /align-self: end;
+        justify-content: center;
+        width: 50%;
+        iframe{
+            margin: 260px 0px 0px 0px;
+            border: 0px;
+            // justify-content: right;
+            // align-self: flex-end;
+            box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
+            //width: 400px; 
+            //height: 270px;
+            width: 80%;
+            //padding-top: 15.25%;
+        }
     }
 }
 
-
+// team //
 
 .team{
     min-height: 580px;
-    //width: 100%;
-    //margin: 0px;
     align-items: center;
     justify-content: center;
     .owl-next,.owl-prev{
         background-color: white;
         border: none;
         width: 50px;
-        min-width: 50px;
+        min-width: 50px; // kartais buna blogai su plociu jei abieju width nenuordau, Kirilai
         height: 50px;
         border-radius: 50%;
         box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.16);
         margin:15px;
         &:hover{
             cursor: pointer;
+        }
+    }
+    .owl-nav{
+        .owl-next,.owl-prev{
+            display: none !important;
         }
     }
     .icon-arrow-left2,.icon-arrow-right2{
@@ -316,6 +312,7 @@ $mainColor: #00b0ff;
     .owl-carousel{
         max-width: 70%;
         min-width: 270px;
+        
     }
     .owl-item{
         margin: 60px 0px;
@@ -425,15 +422,11 @@ h3{
     }
 }
 
-
-
-
 .updates{
     justify-content: space-around;
     flex-direction: column;
     .header{
         padding: 10px 0px;
-        //background-color: rgba(77, 139, 141, 0.52);
         max-width: 900px;
         margin: auto;
     }
@@ -493,9 +486,10 @@ h3{
         margin: 0px auto;
     }
     .right{
-        min-width: 400px;
-        width: 585px;
+        //min-width: 400px;
+        width: 50%;
         margin: 0px auto;
+        justify-content: center
     }
 }
 
@@ -509,17 +503,18 @@ h3{
 
 .facebook {
     background-image: url("../images/fbbg.jpg");
+    background-position: center; 
     background-repeat: no-repeat;
-    max-width: 440px;
-    min-width: 300px;
-    align-self: center;
-    margin: 170px 20px 0px;
-    height: 390px;
+    width: 90%;
+    //align-self: center;
+    margin-top: 170px;// auto;
+    height: 400px;
+    justify-content: center;
+    .fb-page{
+        margin: 100px auto;
+    }
 }
 
-.fb-page{
-    margin: 100px 50px auto 50px;
-}
 
 .instagram-letters {
     font-family: 'Montserrat', sans-serif;
@@ -547,8 +542,9 @@ footer {
     flex-wrap: wrap;
     //background-color: lightblue; //debug
     height: 200px;
-    width: 300px;
-    margin: 45px 15% 0px 0px;
+    //width: 300px;
+    width: 40%;
+    margin: 45px 20px 0px 0px;
     .list-item{
         margin: 0px 40px 25px 0px;
         text-decoration: none;
@@ -563,8 +559,8 @@ footer {
     }
 }
 .boxas .newsletter{
-    width: 300px;
-    margin: 50px 16% 0px;
+    width: 40%;
+    margin: 45px 20px 45px 0px;
     h2{
         color:white;
         font-family: 'Montserrat', sans-serif;
@@ -587,11 +583,9 @@ footer {
         font-family: 'Raleway', sans-serif;
         font-size: 14px;
         background-color: transparent; // !important;
-        width: 200px;
+        width: 100%;
         padding-bottom: 4px;
         margin-right: auto;
-        //display: inline;
-        //transform: translateY(4px);
         //kaip resetint ant chrome active state, input active override chrome
         &:focus{
             background-color: transparent;
@@ -618,7 +612,7 @@ footer {
     .input-form{
         border: 2px solid #4d4d4d;
         border-width: 0px 0px 2px 0px;
-        width: 300px;
+        width: 100%;
     }
 
     .icon-arrow-right2{
@@ -656,11 +650,13 @@ footer {
   @media screen and (max-width: 900px) {
 
     .nav-list, .social-icons{
+        position: absolute;
+        right: 0;
         display: none;
         flex-wrap: wrap;
     }
 
-    .nav-list.show{
+    .nav-list.show, .social-icons.show{
         display: block;
     }
 
@@ -682,6 +678,8 @@ footer {
       text-align: right;
       align-self: flex-end;
       margin: 20px 20px 0px 0px;
+      padding: 20px 30px 10px 30px;
+      background-color: $mainColor;
     }
 
     .nav-bar li {
@@ -690,10 +688,14 @@ footer {
             font-size: 20px;
         }
     }
+    .nav-bar{
+        position: absolute;
+        width: 100%;
+    }
+    .title{
+        margin: 200px auto;
+    }
 
-  }
-  
-  @media screen and (max-width: 900px) {
     .gallery, .store, .bg .container, .social{
         flex-wrap: wrap;
     }
@@ -735,8 +737,9 @@ footer {
     .social .left{
         max-height:900px;
     }
-    .facebook{
+    .right, .right .facebook{
         margin: 40px auto 0px;
+        width: 100% !important;
     }
 
     footer .boxas{
@@ -759,9 +762,8 @@ footer {
     }
 
     .store{
-
         .board-info{
-            min-width: 100%;
+            //min-width: 100%;
             padding: 25px;
         }
         .section{
@@ -769,19 +771,15 @@ footer {
             flex-wrap: wrap;
             width: 100%;
         }
-        
     }
 
-    .social {
-        .right{
-            min-width: 200px;
-        }
-        .left{
-            min-width: 200px;
-        }
-        .instagram{
-            min-width: 200px;
-        }
+    .nav-bar .burger{
+        display: block;
+        text-align: right;
+    }
+
+    .owl-dot{
+        transform: translateY(-80px) !important; //sunkiai targetina, reik daug parentu prirasyt, del to !important
     }
 
     .boxas {
@@ -795,8 +793,9 @@ footer {
                 font-size: 18px;
             }
             .email-submit{
-                width: 45px;
-                height: 45px;
+                width: 43px;
+                min-width: 43px; // vel blogai, jei be dvieju width
+                height: 43px;
             }
         }
         .icon-envelop{
@@ -823,28 +822,12 @@ footer {
         }
     }
 
-    .facebook{
-        max-width: 300px;
-        min-width: 200px;
-        margin: 40px 0px 0px 0px;
-    }
-
-    .gallery-images{
-        display: none;
-    }
-
     .team{
         min-height: 500px;
     }
 
     .owl-next,.owl-prev{
         display: none;
-    }
-
-    .about-us iframe{
-        max-width: 290px;
-        max-height: 200px;
-        margin-right: 40px;
     }
 
     .instagram-letters{
@@ -856,9 +839,9 @@ footer {
   }
 
   @media screen and (max-width: 1160px) {
-    .store{
-        max-width: 90%;
-    }
+    // .store{
+    //     max-width: 90%;
+    // }
     .about-us iframe{
         margin-right: 40px;
     }

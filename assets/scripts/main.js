@@ -6,7 +6,7 @@ $(document).ready(function(){
         loop:false,
         //margin:200,
         autowidth:false,
-        nav:false,
+        nav:true,
         responsive:{
             0:{
                 items:1
@@ -38,6 +38,14 @@ $(document).ready(function(){
         //$('.social-icons').toggleClass('show');
     });
 
+    $('.section li').click(function(){
+        $('.section li').removeClass('show');
+        $('.description,.features,.dimensions').removeClass('visible');
+        $(this).addClass('show');
+        var temp = $(this).text().toLowerCase();
+        $('.'+temp).addClass('visible');
+    });
+
     var boards = $('.board-gallery').owlCarousel({
         loop:false,
         autowidth:true,
@@ -45,7 +53,7 @@ $(document).ready(function(){
         dots:true,
         items:1,
         singleItem: true,
-        dotsData: true,
+        //dotsData: true,
         responsive:{
             0:{
                 items:1
@@ -53,20 +61,13 @@ $(document).ready(function(){
         }
     });
 
-    $('.section').on('click',function(){
-        console.log("pressed");
-        $(this).not().removeClass(".show");
-        $(this).addClass(".show");
+    // adds images to thumbnails
+    $('.owl-dot').each(function(ind) {
+        var imgs = $('.owl-carousel'); 
+        $(this).css('background-image',"url('assets/images/board" + ind++ + ".png')");
     });
+
 
 });
 
-// function myFunction() {
-//     var x = document.getElementsByClassName("nav-bar")[0];
-//     if (x.className === "nav-bar flex") {
-//         console.log("called");
-//         x.className += " responsive";
-//     } else {
-//         x.className = "nav-bar flex";
-//     }
-// }
+

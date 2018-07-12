@@ -36,13 +36,12 @@
                         <ul class="nav-list flex">
                             <li><a href="#hero" class="button">Boards</a></li>
                             <li><a href="#store" class="button">Accecories</a></li>
-                            <li><a href="#about-us" class="button">Blog</a></li>
+                            <li><a href="#updates" class="button">Blog</a></li>
                             <li><a href="#about-us" class="button">Technology</a></li>
-                            <li><a href="#about-us" class="button">Team</a></li>
+                            <li><a href="#team" class="button">Team</a></li>
                             <li><a href="#footer" class="button">Dealers</a></li>
                         </ul>
                     </div>
-
 
                     <div class="social-icons flex">
                         <a href="https://www.facebook.com/Surferscompany/" target="_blank" class="icon-black-circe">
@@ -59,36 +58,32 @@
                         
                     </div>
                 </div>
-                <div class="title">
-                    <h1><i>Ride every wave as if it's your last</i></h1>
-                    <h2><i>We love the motion of the ocean</i></h2>
+                <div class="flex">
+                    <div class="title">
+                        <h1><i>Ride every wave as if it's your last</i></h1>
+                        <h2><i>We love the motion of the ocean</i></h2>
+                    </div>
+                </div>
                 </div>
                     <div class="store flex" id="store">
                         <div class="owl-carousel owl-theme board-gallery">
-                                <img src="assets/images/board1.png" data-dot="<img class='small-img' src='assets/images/board1.png'>" alt="board1">
-                                <img src="assets/images/board2.png" data-dot="<img class='small-img' src='assets/images/board2.png'>" alt="board2">
-                                <img src="assets/images/board3.png" data-dot="<img class='small-img' src='assets/images/board3.png'>" alt="board3">
-                                <img src="assets/images/board4.png" data-dot="<img class='small-img' src='assets/images/board4.png'>" alt="board4">
-                                <img src="assets/images/board5.png" data-dot="<img class='small-img' src='assets/images/board5.png'>" alt="board5">
-                            <!-- <div class="gallery-images flex">
-                                <img src="assets/images/small/board1.png" alt="img1">
-                                <img src="assets/images/small/board2.png" alt="img2">
-                                <img src="assets/images/small/board3.png" alt="img3">
-                                <img src="assets/images/small/board4.png" alt="img4">
-                                <img src="assets/images/small/board5.png" alt="img5">
-                            </div> -->
+                                <img src="assets/images/board1.png" alt="board1">
+                                <img src="assets/images/board2.png" alt="board2">
+                                <img src="assets/images/board3.png" alt="board3">
+                                <img src="assets/images/board4.png" alt="board4">
+                                <img src="assets/images/board5.png" alt="board5">
                         </div>
                         <div class="board-info flex">
                             <h2>JR Surfboards The Donny Stoker Yellow/Green Rail Fade</h2>
                             <div class="stars"><span>&#9733&#9733&#9733&#9733</span>&#9734 (52)</div>
                             <ul class="section flex">
-                                <li>Description</li>
+                                <li class="show">Description</li>
                                 <li>Features</li>
                                 <li>Dimensions</li>
                             </ul>
-                            <div class="description">
-                                    Easy to ride, care free surfing craft that's fun for everyone, paddles well, super fast down the line and great for any level of surfing depending on who rides it. The Donny Stoker, a rework on design from stokesys first ever pro model. A super easy to surf and fun board. The Donny Stoker is a board for total freesurfing expression.
-                            </div>
+                            <div class="description visible">This Is Our New 6’ Surfboard, Which Features Durable Top Foam And Slick HDPE High Speed Bottom. It Is Ideal For Beginners For Adults And Children. With This Board, Beginners Can Enjoy Wonderful Surfing Experience. The Fashionable Appearance, Good Quality And Competitive Price Can Be Realized Here. Welcome!</div>
+                            <div class="features">This surfboard is designed with free leash and transaction pad which is comfortable and convenient to use.</div>
+                            <div class="dimensions">Dimension:72'' X 20'' X 3''(L X W X Thickness)</div>
                             <div class="price">
                                 <p>$499.99</p>
                                 <a href="#" class="link" >Buy now</a>
@@ -120,7 +115,8 @@
                         </div>
                     </div>
                     <div class="right flex">
-                            <iframe style="border: 0px;" src="https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1"></iframe>
+                            <!-- https://www.youtube.com/embed/b6hoBp7Hk-A?ecver=1 -->
                     </div>
                 </div>
             </div>
@@ -134,7 +130,7 @@
                 <div class="team flex" id="team">
                     <button type="button" role="presentation" class="owl-prev"><span class="icon-arrow-left2"></span></button>
 
-                    <div class="owl-carousel team-mates"> 
+                    <div class="owl-carousel owl-theme team-mates"> 
                         <div><a href="#" class="team-member flex">
                             <div style='background-image: url(assets/images/member1.jpg);' class="round-image"></div>
                             <h2 class="member-name">Taj Burrow</h2>
@@ -169,7 +165,7 @@
             </div>
 
         <!-- Updates -->
-        <div class="updates container flex">
+        <div class="updates container flex" id="updates">
             <div class="header">
                 <h3>Latest updates</h3>
                 <span class="icon-cancel-circle x-icon"></span>
@@ -219,8 +215,8 @@
                                     <script async defer src="//www.instagram.com/embed.js"></script>
                                  </div>
                     </div>
-                    <div class="right">
-                        <div class="facebook">
+                    <div class="right flex">
+                        <div class="facebook flex">
                             <div class="fb-page" style="margin: 100px 50px auto 50px;"
                                 data-href="https://www.facebook.com/Surferscompany/"
                                 data-width="340" 

@@ -20,6 +20,8 @@ body {
 
 .logo {
   padding-left: 20px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .container {
@@ -153,11 +155,58 @@ body {
   background: -o-linear-gradient(315deg, #00b0ff 0%, #00b0ff 37%, white 37%, white 100%);
   background: linear-gradient(135deg, #00b0ff 0%, #00b0ff 37%, white 37%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeff', endColorstr='#ffffff', GradientType=1 );
-  max-width: 1030px;
-  min-height: 600px;
+  width: 90%;
   margin: 0px auto;
   -webkit-box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
   box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
+}
+
+.store .stars span {
+  color: gold;
+}
+
+.store .price p {
+  display: inline;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.store .view-link {
+  padding-top: 80px;
+  display: block;
+}
+
+.store .view-link a {
+  color: #00b0ff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.store .section {
+  padding: 0px;
+  border: 1px solid gray;
+  border-width: 0px 0px 1px 0px;
+}
+
+.store .section li {
+  margin: 10px 0px;
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #a0a0a0;
+  padding-right: 30px;
+  text-transform: uppercase;
+}
+
+.store .section li:hover {
+  cursor: pointer;
+}
+
+.store .section .show {
+  color: #000;
 }
 
 .store .board-gallery.owl-carousel {
@@ -166,8 +215,7 @@ body {
 }
 
 .store .board-gallery.owl-carousel img {
-  width: auto !important;
-  max-width: 100% !important;
+  width: auto;
   text-align: center;
   height: 100%;
   margin: 10px auto;
@@ -176,9 +224,9 @@ body {
 .store .board-gallery.owl-carousel .owl-dots {
   margin: 0px;
   width: 100%;
-  -webkit-transform: translateY(-80px);
-  -ms-transform: translateY(-80px);
-  transform: translateY(-80px);
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
 }
 
 .store .board-gallery.owl-carousel .owl-dots .owl-dot {
@@ -188,6 +236,11 @@ body {
   width: 70px;
   height: 70px;
   background-color: white;
+  background-size: cover;
+}
+
+.store .board-gallery.owl-carousel .owl-dots .owl-dot span {
+  display: none;
 }
 
 .store .board-gallery.owl-carousel .owl-dots .owl-dot .small-img {
@@ -196,7 +249,6 @@ body {
 
 .store .board-info {
   width: 50%;
-  min-width: 440px;
   padding: 50px;
   font-family: 'Montserrat', sans-serif;
   -webkit-box-orient: vertical;
@@ -211,48 +263,15 @@ body {
   margin-top: 0px;
 }
 
-.store .description {
+.store .description, .store .features, .store .dimensions {
+  display: none;
   font-size: 16px;
   color: #787878;
   padding-bottom: 12px;
 }
 
-.stars span {
-  color: gold;
-}
-
-.price p {
-  display: inline;
-  font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  margin-right: 25px;
-}
-
-.view-link {
-  padding-top: 80px;
+.store .visible {
   display: block;
-}
-
-.view-link a {
-  color: #00b0ff;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.section {
-  padding: 10px 0px;
-  border: 1px solid gray;
-  border-width: 0px 0px 1px 0px;
-}
-
-.section li {
-  list-style: none;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  padding-right: 30px;
-  text-transform: uppercase;
 }
 
 .about-us {
@@ -287,12 +306,19 @@ body {
   z-index: -1;
 }
 
-.about-us iframe {
-  margin: 260px 0px 0px 70px;
+.about-us .right {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.about-us .right iframe {
+  margin: 260px 0px 0px 0px;
+  border: 0px;
   -webkit-box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
-  width: 400px;
-  height: 270px;
+  width: 80%;
 }
 
 .team {
@@ -319,6 +345,10 @@ body {
 
 .team .owl-next:hover, .team .owl-prev:hover {
   cursor: pointer;
+}
+
+.team .owl-nav .owl-next, .team .owl-nav .owl-prev {
+  display: none !important;
 }
 
 .team .icon-arrow-left2, .team .icon-arrow-right2 {
@@ -538,9 +568,11 @@ h3 {
 }
 
 .social .right {
-  min-width: 400px;
-  width: 585px;
+  width: 50%;
   margin: 0px auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .instagram {
@@ -551,17 +583,18 @@ h3 {
 
 .facebook {
   background-image: url("../images/fbbg.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  max-width: 440px;
-  min-width: 300px;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin: 170px 20px 0px;
-  height: 390px;
+  width: 90%;
+  margin-top: 170px;
+  height: 400px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.fb-page {
-  margin: 100px 50px auto 50px;
+.facebook .fb-page {
+  margin: 100px auto;
 }
 
 .instagram-letters {
@@ -599,8 +632,8 @@ footer .boxas {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 200px;
-  width: 300px;
-  margin: 45px 15% 0px 0px;
+  width: 40%;
+  margin: 45px 20px 0px 0px;
 }
 
 .boxas .panel .list-item {
@@ -618,8 +651,8 @@ footer .boxas {
 }
 
 .boxas .newsletter {
-  width: 300px;
-  margin: 50px 16% 0px;
+  width: 40%;
+  margin: 45px 20px 45px 0px;
 }
 
 .boxas .newsletter h2 {
@@ -642,7 +675,7 @@ footer .boxas {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   background-color: transparent;
-  width: 200px;
+  width: 100%;
   padding-bottom: 4px;
   margin-right: auto;
 }
@@ -672,7 +705,7 @@ footer .boxas {
 .newsletter .input-form {
   border: 2px solid #4d4d4d;
   border-width: 0px 0px 2px 0px;
-  width: 300px;
+  width: 100%;
 }
 
 .newsletter .icon-arrow-right2 {
@@ -693,11 +726,13 @@ footer .boxas {
 
 @media screen and (max-width: 900px) {
   .nav-list, .social-icons {
+    position: absolute;
+    right: 0;
     display: none;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  .nav-list.show {
+  .nav-list.show, .social-icons.show {
     display: block;
   }
   .menu-item {
@@ -717,6 +752,8 @@ footer .boxas {
     -ms-flex-item-align: end;
     align-self: flex-end;
     margin: 20px 20px 0px 0px;
+    padding: 20px 30px 10px 30px;
+    background-color: #00b0ff;
   }
   .nav-bar li {
     height: 40px;
@@ -724,9 +761,13 @@ footer .boxas {
   .nav-bar li a {
     font-size: 20px;
   }
-}
-
-@media screen and (max-width: 900px) {
+  .nav-bar {
+    position: absolute;
+    width: 100%;
+  }
+  .title {
+    margin: 200px auto;
+  }
   .gallery, .store, .bg .container, .social {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -771,8 +812,9 @@ footer .boxas {
   .social .left {
     max-height: 900px;
   }
-  .facebook {
+  .right, .right .facebook {
     margin: 40px auto 0px;
+    width: 100% !important;
   }
   footer .boxas {
     -webkit-box-align: center;
@@ -795,7 +837,6 @@ footer .boxas {
     height: 150px;
   }
   .store .board-info {
-    min-width: 100%;
     padding: 25px;
   }
   .store .section {
@@ -803,14 +844,14 @@ footer .boxas {
     flex-wrap: wrap;
     width: 100%;
   }
-  .social .right {
-    min-width: 200px;
+  .nav-bar .burger {
+    display: block;
+    text-align: right;
   }
-  .social .left {
-    min-width: 200px;
-  }
-  .social .instagram {
-    min-width: 200px;
+  .owl-dot {
+    -webkit-transform: translateY(-80px) !important;
+    -ms-transform: translateY(-80px) !important;
+    transform: translateY(-80px) !important;
   }
   .boxas .newsletter {
     width: 90%;
@@ -823,8 +864,9 @@ footer .boxas {
     font-size: 18px;
   }
   .boxas .newsletter .email-submit {
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    min-width: 43px;
+    height: 43px;
   }
   .boxas .icon-envelop {
     padding-top: 10px;
@@ -847,24 +889,11 @@ footer .boxas {
   .boxas .panel p {
     font-size: 20px;
   }
-  .facebook {
-    max-width: 300px;
-    min-width: 200px;
-    margin: 40px 0px 0px 0px;
-  }
-  .gallery-images {
-    display: none;
-  }
   .team {
     min-height: 500px;
   }
   .owl-next, .owl-prev {
     display: none;
-  }
-  .about-us iframe {
-    max-width: 290px;
-    max-height: 200px;
-    margin-right: 40px;
   }
   .instagram-letters {
     font-size: 15vw;
@@ -875,9 +904,6 @@ footer .boxas {
 }
 
 @media screen and (max-width: 1160px) {
-  .store {
-    max-width: 90%;
-  }
   .about-us iframe {
     margin-right: 40px;
   }
