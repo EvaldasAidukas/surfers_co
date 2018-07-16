@@ -58,7 +58,8 @@ body {
   font-size: 13vw;
   margin: 0px;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.075);
+  color: rgba(0, 0, 0, 0.025);
+  text-align: center;
   line-height: 0px;
   -webkit-transform: translateY(-20px);
   -ms-transform: translateY(-20px);
@@ -276,6 +277,7 @@ body {
 
 .about-us {
   background-image: url("../images/about.jpg");
+  background-size: 1920px;
   background-repeat: no-repeat;
   min-height: 100vh;
   position: relative;
@@ -293,6 +295,7 @@ body {
 
 .about-us .bg {
   position: relative;
+  background-size: cover;
 }
 
 .about-us .bg::before {
@@ -318,6 +321,7 @@ body {
   border: 0px;
   -webkit-box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
+  height: 270px;
   width: 80%;
 }
 
@@ -347,8 +351,8 @@ body {
   cursor: pointer;
 }
 
-.team .owl-nav .owl-next, .team .owl-nav .owl-prev {
-  display: none !important;
+.team .owl-nav, .team .owl-nav.owl-next, .team .owl-nav.owl-prev {
+  display: none;
 }
 
 .team .icon-arrow-left2, .team .icon-arrow-right2 {
@@ -430,15 +434,15 @@ body {
 }
 
 .our-team-letters {
-  padding-top: 40px;
-  position: relative;
   font-family: 'Montserrat', sans-serif;
+  display: block;
   font-weight: bold;
-  font-size: 190px;
-  text-align: center;
+  font-size: 13vw;
+  margin: 0px;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.05);
-  line-height: 0%;
+  color: rgba(0, 0, 0, 0.025);
+  text-align: center;
+  line-height: 1em;
   -webkit-transform: translateY(120px);
   -ms-transform: translateY(120px);
   transform: translateY(120px);
@@ -550,7 +554,7 @@ h3 {
   -webkit-box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  color: #0022ff !important;
+  color: #0022ff;
 }
 
 .gallery-item h2 {
@@ -599,11 +603,14 @@ h3 {
 
 .instagram-letters {
   font-family: 'Montserrat', sans-serif;
+  display: block;
   font-weight: bold;
-  font-size: 90px;
-  color: rgba(0, 0, 0, 0.075);
-  text-align: center;
+  font-size: 13vw;
+  margin: 0px;
   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.025);
+  text-align: center;
+  font-size: 90px;
   -webkit-transform: translateY(30px);
   -ms-transform: translateY(30px);
   transform: translateY(30px);
@@ -611,7 +618,6 @@ h3 {
 
 footer {
   background-color: black;
-  height: 420px;
 }
 
 footer .boxas {
@@ -796,10 +802,16 @@ footer .boxas {
   .about-us .container .left {
     width: 100%;
   }
+  .about-us .container .right {
+    width: 80%;
+  }
   .about-us .container iframe {
     width: 500px;
     height: 300px;
     margin: 0px auto;
+  }
+  #team .owl-nav {
+    display: none;
   }
   .social {
     -webkit-box-pack: center;
@@ -812,9 +824,9 @@ footer .boxas {
   .social .left {
     max-height: 900px;
   }
-  .right, .right .facebook {
-    margin: 40px auto 0px;
-    width: 100% !important;
+  .social .right, .social .right .facebook {
+    margin: 40px auto 20px;
+    width: 100%;
   }
   footer .boxas {
     -webkit-box-align: center;
@@ -848,10 +860,10 @@ footer .boxas {
     display: block;
     text-align: right;
   }
-  .owl-dot {
-    -webkit-transform: translateY(-80px) !important;
-    -ms-transform: translateY(-80px) !important;
-    transform: translateY(-80px) !important;
+  #hero.owl-dot {
+    -webkit-transform: translateY(-80px);
+    -ms-transform: translateY(-80px);
+    transform: translateY(-80px);
   }
   .boxas .newsletter {
     width: 90%;
@@ -892,7 +904,7 @@ footer .boxas {
   .team {
     min-height: 500px;
   }
-  .owl-next, .owl-prev {
+  .team .owl-nav {
     display: none;
   }
   .instagram-letters {
@@ -900,12 +912,6 @@ footer .boxas {
     -webkit-transform: translateY(20px);
     -ms-transform: translateY(20px);
     transform: translateY(20px);
-  }
-}
-
-@media screen and (max-width: 1160px) {
-  .about-us iframe {
-    margin-right: 40px;
   }
 }
 

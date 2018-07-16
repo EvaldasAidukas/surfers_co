@@ -60,14 +60,22 @@ $(document).ready(function(){
             }
         }
     });
-
+    
     // adds images to thumbnails
     $('.owl-dot').each(function(ind) {
-        var imgs = $('.owl-carousel'); 
-        $(this).css('background-image',"url('assets/images/board" + ind++ + ".png')");
+        var imgs = [];
+        for(var i=0; i<$('.store .owl-item img').length;i++){
+            imgs[i]=$('.store .owl-item img')[i].src;
+        }
+        //console.log(imgs);
+        $(this).css('background-image',"url('"+imgs[ind]+"')");
     });
 
+    //corrects height of youtube video, after apge refresh
+    var video = document.getElementById('video').offsetWidth;
+    document.getElementById("video").style.height = video*0.55 + "px";
 
 });
+
 
 

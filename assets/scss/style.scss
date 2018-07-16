@@ -13,6 +13,16 @@ $mainColor: #00b0ff;
     cursor: pointer;
 }
 
+@mixin bigLetters{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    font-weight: bold;
+    font-size: 13vw; //196px;
+    margin: 0px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.025);
+    text-align: center;
+}
 
 .flex {
     display: flex;
@@ -48,13 +58,7 @@ $mainColor: #00b0ff;
     align-items: flex-end;
     justify-content: center;
     h4{
-        font-family: 'Montserrat', sans-serif;
-        display: block;
-        font-weight: bold;
-        font-size: 13vw; //196px;
-        margin: 0px;
-        text-transform: uppercase;
-        color: rgba(0, 0, 0, 0.075);
+        @include bigLetters();
         line-height: 0px;
         transform: translateY(-20px);
     }
@@ -186,7 +190,7 @@ $mainColor: #00b0ff;
         max-height: 600px;
         img{
             //width: 100%;
-            width: auto;// !important;
+            width: auto;
             text-align: center;
             height: 100%;
             margin: 10px auto;
@@ -240,6 +244,7 @@ $mainColor: #00b0ff;
 
 .about-us {
     background-image: url("../images/about.jpg");
+    background-size: 1920px;
     background-repeat: no-repeat;
     min-height: 100vh;
     //margin-bottom: 100px;
@@ -253,6 +258,7 @@ $mainColor: #00b0ff;
     }
     .bg{
         position: relative;
+            background-size: cover;
         &::before{
             content: "";
             display: block;
@@ -270,13 +276,9 @@ $mainColor: #00b0ff;
         iframe{
             margin: 260px 0px 0px 0px;
             border: 0px;
-            // justify-content: right;
-            // align-self: flex-end;
             box-shadow: 20px 34.641px 50px 0px rgba(0, 0, 0, 0.2);
-            //width: 400px; 
-            //height: 270px;
+            height: 270px;
             width: 80%;
-            //padding-top: 15.25%;
         }
     }
 }
@@ -300,10 +302,8 @@ $mainColor: #00b0ff;
             cursor: pointer;
         }
     }
-    .owl-nav{
-        .owl-next,.owl-prev{
-            display: none !important;
-        }
+    .owl-nav, .owl-nav.owl-next, .owl-nav.owl-prev{
+            display: none;
     }
     .icon-arrow-left2,.icon-arrow-right2{
         color:#0022ff;
@@ -368,17 +368,9 @@ $mainColor: #00b0ff;
 }
 
 .our-team-letters{
-    padding-top: 40px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 190px;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.05);
-    line-height: 0%;
+    @include bigLetters();
+    line-height: 0em;
     transform: translateY(120px);
-    //margin: -40px 0px;
 }  
 
 .big-wave{
@@ -454,7 +446,6 @@ h3{
 
 .gallery{
     justify-content: center;
-    //margin: 20px 0px;
 }
 
 .gallery-item{
@@ -468,7 +459,7 @@ h3{
     }
     &:hover{
         @include secondaryHover();
-        color: #0022ff !important;
+        color: #0022ff;
     }
     h2{
         font-family: 'Montserrat', sans-serif;
@@ -515,21 +506,15 @@ h3{
     }
 }
 
-
 .instagram-letters {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    @include bigLetters();
     font-size: 90px;
-    color: rgba(0, 0, 0, 0.075); 
-    text-align: center;
-    text-transform: uppercase;
-    //color: rgba(0, 0, 0, 0.3); //temp
     transform: translateY(30px);
 }
 
 footer {
     background-color: black; 
-    height: 420px;
+    //height: 420px;
     .boxas{
         flex-direction: column;
         align-items: flex-end;
@@ -582,7 +567,7 @@ footer {
         border: 0px;
         font-family: 'Raleway', sans-serif;
         font-size: 14px;
-        background-color: transparent; // !important;
+        background-color: transparent; 
         width: 100%;
         padding-bottom: 4px;
         margin-right: auto;
@@ -633,19 +618,6 @@ footer {
     margin-right: 20px;
   }
 
-// @media screen and (max-width: 900px) {
-//     .nav-bar{
-//         position: sticky;
-//     }
-//     .nav-bar *:not(:first-child) {
-//         display: none;
-//     }
-//     .nav-bar .icon {
-//       //float: right;
-//       margin-right: 20px;
-//       display: block;
-//     }
-//   }
 
   @media screen and (max-width: 900px) {
 
@@ -722,6 +694,9 @@ footer {
         .left{
             width: 100%;
         }
+        .right{
+            width:80%;
+        }
         iframe{
             width: 500px;
             height: 300px;
@@ -729,17 +704,23 @@ footer {
         }
     }
 
+    #team{
+        .owl-nav{
+            display: none;
+        }
+    }  
 
     .social{
         justify-content: center;
         align-items: center;
+        .left{
+            max-height:900px;
+        }
     }
-    .social .left{
-        max-height:900px;
-    }
-    .right, .right .facebook{
-        margin: 40px auto 0px;
-        width: 100% !important;
+    
+    .social .right, .social .right .facebook{
+        margin: 40px auto 20px;
+        width: 100%;
     }
 
     footer .boxas{
@@ -778,8 +759,8 @@ footer {
         text-align: right;
     }
 
-    .owl-dot{
-        transform: translateY(-80px) !important; //sunkiai targetina, reik daug parentu prirasyt, del to !important
+    #hero.owl-dot{
+        transform: translateY(-80px); 
     }
 
     .boxas {
@@ -824,30 +805,17 @@ footer {
 
     .team{
         min-height: 500px;
-    }
-
-    .owl-next,.owl-prev{
-        display: none;
-    }
+        .owl-nav{
+            display: none;
+        }
+    }   
 
     .instagram-letters{
         font-size: 15vw;
-        //line-height: 20px;
         transform: translateY(20px);
     }
 
   }
-
-  @media screen and (max-width: 1160px) {
-    // .store{
-    //     max-width: 90%;
-    // }
-    .about-us iframe{
-        margin-right: 40px;
-    }
-
-  }
-
 
 // focus arba active
 
