@@ -72,10 +72,14 @@ $(document).ready(function(){
     });
 
     //corrects height of youtube video, after apge refresh
-    var video = document.getElementById('video').offsetWidth;
-    document.getElementById("video").style.height = video*0.55 + "px";
+    if(document.getElementById('video')!=null){
+        var video = document.getElementById('video').offsetWidth;
+        document.getElementById("video").style.height = video*0.55 + "px";
+    };
 
 });
+
+
 
 
 

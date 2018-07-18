@@ -20,8 +20,8 @@ body {
 
 .logo {
   padding-left: 20px;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .container {
@@ -99,6 +99,29 @@ body {
   background-color: #00b0ff;
   color: white;
   cursor: pointer;
+}
+
+.blog-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.blog-content img {
+  padding: 12px;
+  max-width: 40%;
+}
+
+.blog-content div {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #4d4d4d;
+  width: 40%;
+  min-height: 200px;
 }
 
 .title {
@@ -225,9 +248,9 @@ body {
 .store .board-gallery.owl-carousel .owl-dots {
   margin: 0px;
   width: 100%;
-  -webkit-transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
-  transform: translateY(-100px);
+  -webkit-transform: translateY(-120px);
+  -ms-transform: translateY(-120px);
+  transform: translateY(-120px);
 }
 
 .store .board-gallery.owl-carousel .owl-dots .owl-dot {
@@ -295,7 +318,6 @@ body {
 
 .about-us .bg {
   position: relative;
-  background-size: cover;
 }
 
 .about-us .bg::before {
@@ -442,7 +464,7 @@ body {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.025);
   text-align: center;
-  line-height: 1em;
+  line-height: 0px;
   -webkit-transform: translateY(120px);
   -ms-transform: translateY(120px);
   transform: translateY(120px);
@@ -566,7 +588,7 @@ h3 {
 
 .social .left {
   width: 585px;
-  min-width: 320px;
+  min-width: 300px;
   max-height: 585px;
   margin: 0px auto;
 }
@@ -749,9 +771,9 @@ footer .boxas {
     text-align: right;
   }
   .logo {
-    padding-top: 20px;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
+    padding-left: 20px;
+    -ms-flex-item-align: center;
+    align-self: center;
   }
   .nav-bar ul {
     text-align: right;
@@ -868,6 +890,7 @@ footer .boxas {
   .boxas .newsletter {
     width: 90%;
     margin: 0px;
+    margin-bottom: 20px;
   }
   .boxas .newsletter h2 {
     font-size: 20px;
@@ -904,7 +927,7 @@ footer .boxas {
   .team {
     min-height: 500px;
   }
-  .team .owl-nav {
+  .team .owl-next, .team .owl-prev {
     display: none;
   }
   .instagram-letters {

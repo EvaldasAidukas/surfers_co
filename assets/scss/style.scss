@@ -34,7 +34,7 @@ $mainColor: #00b0ff;
 
 .logo {
     padding-left: 20px;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .container {
@@ -89,6 +89,22 @@ $mainColor: #00b0ff;
     text-decoration: none;
     &:hover{
         @include mainHover();
+    }
+}
+
+.blog-content{
+    flex-direction: column;
+    align-items: center;
+    img{
+        padding: 12px;
+        max-width: 40%;
+    }
+    div{
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        color: #4d4d4d;
+        width: 40%;
+        min-height: 200px;
     }
 }
 
@@ -198,7 +214,7 @@ $mainColor: #00b0ff;
         .owl-dots{
             margin: 0px;
             width: 100%;
-            transform: translateY(-100px);
+            transform: translateY(-120px);
             .owl-dot{
                 border: 1px solid gray;
                 margin: 0px 2px;
@@ -258,7 +274,7 @@ $mainColor: #00b0ff;
     }
     .bg{
         position: relative;
-            background-size: cover;
+        //background-size: cover;
         &::before{
             content: "";
             display: block;
@@ -303,7 +319,7 @@ $mainColor: #00b0ff;
         }
     }
     .owl-nav, .owl-nav.owl-next, .owl-nav.owl-prev{
-            display: none;
+        display: none;
     }
     .icon-arrow-left2,.icon-arrow-right2{
         color:#0022ff;
@@ -312,7 +328,6 @@ $mainColor: #00b0ff;
     .owl-carousel{
         max-width: 70%;
         min-width: 270px;
-        
     }
     .owl-item{
         margin: 60px 0px;
@@ -337,10 +352,8 @@ $mainColor: #00b0ff;
     align-items: center;
     justify-content: center;
     text-decoration: none;    
-    
     &:hover{
         background-color:$mainColor;
-        //cursor: pointer; //        color: white;
     } 
     &:hover h2,&:hover div{
         color: white;
@@ -369,7 +382,7 @@ $mainColor: #00b0ff;
 
 .our-team-letters{
     @include bigLetters();
-    line-height: 0em;
+    line-height: 0px;
     transform: translateY(120px);
 }  
 
@@ -472,12 +485,11 @@ h3{
 .social {
     .left{
         width: 585px;
-        min-width: 320px;
+        min-width: 300px;
         max-height: 585px; // 897 max instagram height - 225 dizaine footer uzlipimo aukstis -151(897-746)
         margin: 0px auto;
     }
     .right{
-        //min-width: 400px;
         width: 50%;
         margin: 0px auto;
         justify-content: center
@@ -485,11 +497,9 @@ h3{
 }
 
 .instagram {
-    //padding: 40px;
     width: 100%;
     position: relative;
     z-index: 1;
-    //display: none;
 }
 
 .facebook {
@@ -497,7 +507,6 @@ h3{
     background-position: center; 
     background-repeat: no-repeat;
     width: 90%;
-    //align-self: center;
     margin-top: 170px;// auto;
     height: 400px;
     justify-content: center;
@@ -514,7 +523,6 @@ h3{
 
 footer {
     background-color: black; 
-    //height: 420px;
     .boxas{
         flex-direction: column;
         align-items: flex-end;
@@ -579,7 +587,6 @@ footer {
             background-color: transparent;
             color: white;
         }
-
     }
     .email-submit{
         background-color: $mainColor;
@@ -593,13 +600,11 @@ footer {
         align-items: flex-end;
         //text-align: right;
     }
-
     .input-form{
         border: 2px solid #4d4d4d;
         border-width: 0px 0px 2px 0px;
         width: 100%;
     }
-
     .icon-arrow-right2{
         color: white;
         &:hover{
@@ -618,123 +623,122 @@ footer {
     margin-right: 20px;
   }
 
+@media screen and (max-width: 900px) {
 
-  @media screen and (max-width: 900px) {
+.nav-list, .social-icons{
+    position: absolute;
+    right: 0;
+    display: none;
+    flex-wrap: wrap;
+}
 
-    .nav-list, .social-icons{
-        position: absolute;
-        right: 0;
-        display: none;
-        flex-wrap: wrap;
-    }
+.nav-list.show, .social-icons.show{
+    display: block;
+}
 
-    .nav-list.show, .social-icons.show{
-        display: block;
-    }
+.menu-item{
+    width: 100%;
+}
 
-    .menu-item{
-        width: 100%;
-    }
+.nav-bar .burger{
+    display: block;
+    text-align: right;
+}
 
-    .nav-bar .burger{
-        display: block;
-        text-align: right;
-    }
+.logo{
+    padding-left: 20px;
+    align-self: center;
+}
 
-    .logo{
-        padding-top: 20px;
-        align-self: flex-start;
-    }
-    
-    .nav-bar ul {
-      text-align: right;
-      align-self: flex-end;
-      margin: 20px 20px 0px 0px;
-      padding: 20px 30px 10px 30px;
-      background-color: $mainColor;
-    }
+.nav-bar ul {
+    text-align: right;
+    align-self: flex-end;
+    margin: 20px 20px 0px 0px;
+    padding: 20px 30px 10px 30px;
+    background-color: $mainColor;
+}
 
-    .nav-bar li {
-        height: 40px;
-        a{
-            font-size: 20px;
-        }
+.nav-bar li {
+    height: 40px;
+    a{
+        font-size: 20px;
     }
-    .nav-bar{
-        position: absolute;
-        width: 100%;
-    }
-    .title{
-        margin: 200px auto;
-    }
+}
+.nav-bar{
+    position: absolute;
+    width: 100%;
+}
+.title{
+    margin: 200px auto;
+}
 
-    .gallery, .store, .bg .container, .social{
-        flex-wrap: wrap;
-    }
+.gallery, .store, .bg .container, .social{
+    flex-wrap: wrap;
+}
 
-    .store{
+.store{
+    width: 90%;
+    .board-gallery.owl-carousel{
+        //width: 80%;
+        margin: 35px;
         width: 90%;
-        .board-gallery.owl-carousel{
-            //width: 80%;
-            margin: 35px;
-            width: 90%;
-        }
-        .board-info{
-            min-width: 90%;
-        }
     }
-
-    .instagram{
-        padding: 0px 4px;
+    .board-info{
+        min-width: 90%;
     }
+}
 
-    .about-us .container{
-        justify-content: center;
-        align-items: center;
-        .left{
-            width: 100%;
-        }
-        .right{
-            width:80%;
-        }
-        iframe{
-            width: 500px;
-            height: 300px;
-            margin: 0px auto;
-        }
-    }
+.instagram{
+    padding: 0px 4px;
+}
 
-    #team{
-        .owl-nav{
-            display: none;
-        }
-    }  
-
-    .social{
-        justify-content: center;
-        align-items: center;
-        .left{
-            max-height:900px;
-        }
-    }
-    
-    .social .right, .social .right .facebook{
-        margin: 40px auto 20px;
+.about-us .container{
+    justify-content: center;
+    align-items: center;
+    .left{
         width: 100%;
     }
+    .right{
+        width:80%;
+    }
+    iframe{
+        width: 500px;
+        height: 300px;
+        margin: 0px auto;
+    }
+}
 
-    footer .boxas{
-        align-items: center;
-        justify-content: center;
-        .panel{
-            margin: 45px 10px 0px 10px;
-            p{
-                font-size: 17px;
-            }
+#team{
+    .owl-nav{
+        display: none;
+    }
+}  
+
+.social{
+    justify-content: center;
+    align-items: center;
+    .left{
+        max-height:900px;
+    }
+}
+
+.social .right, .social .right .facebook{
+    margin: 40px auto 20px;
+    width: 100%;
+}
+
+footer .boxas{
+    align-items: center;
+    justify-content: center;
+    .panel{
+        margin: 45px 10px 0px 10px;
+        p{
+            font-size: 17px;
         }
     }
-    
-  }
+}
+
+}
 
   @media screen and (max-width: 576px) {
 
@@ -766,7 +770,8 @@ footer {
     .boxas {
         .newsletter{
             width: 90%;
-            margin:  0px;
+            margin: 0px;
+            margin-bottom: 20px;
             h2{
                 font-size: 20px;
             }
@@ -805,7 +810,7 @@ footer {
 
     .team{
         min-height: 500px;
-        .owl-nav{
+        .owl-next,.owl-prev{
             display: none;
         }
     }   
